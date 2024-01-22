@@ -22,7 +22,7 @@ export default function RootLayout({
         via-indigo-400 
         to-indigo-900 
         text-yellow-500
-        h-[500px]
+        h-screen
         "
       >
         <Navbar />
