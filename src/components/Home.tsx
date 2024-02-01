@@ -2,8 +2,13 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import Image from 'next/image'
+
+import { motion } from 'framer-motion'
+
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css'
+
 import { usePortfolioContextProvider } from "@/context/portfolioContext"
 
 const variants = {
@@ -30,20 +35,43 @@ export default function Home() {
 
     const projects = [
         {
-            id: 1,
-            name: "Projet 1",
-            description: "Description du projet 1",
+            name: "CRM",
+            description: "Pour une amie...",
+            techno: "React, TS, MUI, Firebase, API",
+            link: "https://prospection-freya-aurelia77.vercel.app/",
+            images: [
+                {
+                    url: "/images/project1/redim/home.png",
+                    caption: "Home"
+                },
+                {
+                    url: "/images/project1/redim/calendar.png",
+                    caption: "Calendar"
+                },
+                {
+                    url: "/images/project1/redim/view-contact.png",
+                    caption: "View Contact"
+                },
+                {
+                    url: "/images/project1/redim/admin.png",
+                    caption: "Admin"
+                },
+            ]
+        },
+        {
+            name: "Projet 2",
+            description: "Description du projet 2",
+            techno: "React, TS, MUI, Firebase, API",
             image: "/path/to/image1.jpg",
             link: "https://link-to-project1.com"
         },
         {
-            id: 2,
-            name: "Projet 2",
-            description: "Description du projet 2",
+            name: "Projet 3",
+            description: "Description du projet 3",
+            techno: "React, TS, MUI, Firebase, API",
             image: "/path/to/image1.jpg",
             link: "https://link-to-project1.com"
         },
-        // Ajoutez plus de projets ici
     ];
 
 
@@ -56,13 +84,26 @@ export default function Home() {
         <div key={3}><span className='font-bold'>Last whole year : React and TS</span> formation and projects</div>,
         // <div key={3}><span className='font-bold'>Last whole year : React and TS</span> formation and projects ({"Mike\u00A0Codeur"})</div>,
         <div key={4}><span className='font-bold'>5 years IT formation</span></div>,
-    ];
+    ];  
+
+    const spanStyle = {
+        padding: '20px',
+        background: '#efefef',
+        color: '#000000',
+    }
+
+    const divStyle = {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundSize: 'cover',
+        height: '400px'
+    }   
 
 
     return (
         // ENSEMBLE DES ELEMENTS : Présentation, Skills, More (links) 
         <div>
-
             {/* Présentation */}
             <div
                 className='flex justify-between gap-5'
@@ -107,12 +148,12 @@ export default function Home() {
                     }
                 </div>
 
-                {/* Présentation PHOTO + btn CONTACT ME */}
+                {/* Présentation PHOTO (2 tailles de portrait selon la taille de l'écran)  + btn CONTACT ME */}
                 <div className="relative rounded-lg w-[45%] h-[80%] 
                         "
                 // overflow-hidden
                 >
-                    {/* 2 images selon la taille de l'écran */}
+
                     <motion.img
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -229,23 +270,91 @@ export default function Home() {
             </div> */}
 
             {/* Projects */}
+            <div 
+                className="mx-auto bg-white
+            mt-20 absolute left-0">
 
-            <div className="container mx-auto px-4 mt-20">
-                <h2 className="text-2xl font-bold mb-5">Projects</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                    {projects.map((project) => (
-                        <div key={project.id} className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
-                            <img src={project.image} alt={project.name} className="w-full h-64 object-cover" />
+
+
+                 {/* <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-6 sm:rounded-3xl sm:p-12 max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"></div> */}
+
+
+
+                {/* px-4  */}
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-indigo-500 p-3 rounded">Projects</h2>
+
+                <div className="grid grid-cols-1 
+                gap-4">
+                    {/* lg:grid-cols-2  */}
+                    {projects.map((project, index) => (
+                        <div key={index} className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out mt-12 ">
+                            {/* <img src={project.image} alt={project.name} className="w-full h-64 object-cover" />
                             <div className="p-4">
                                 <h3 className="font-bold text-xl mb-2">{project.name}</h3>
                                 <p className="text-gray-700">{project.description}</p>
                                 <a href={project.link} className="mt-2 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">View Project</a>
-                            </div>                           
+                            </div> */}
+                            <h3 className="font-bold text-xl p-2">{project.name}</h3>
+                            <div 
+                            // h-80 
+                            className='
+                            bg-orange-500 p-[4%]'>
+                                <Slide 
+                                //duration={500}
+                                >
+                                    {project.images && project.images.map((image, index) => (
+                                        <div key={index} className='flex flex-col' >
+                                            <span style={{...spanStyle, textAlign:"center" }}>{image.caption}</span>
+                                            <div style={{ 
+                                                ...divStyle, 
+                                                'backgroundImage': `url(${image.url})` ,
+                                                // 'backgroundSize': 'contain', 
+                                                // 'backgroundRepeat': 'no-repeat',
+                                                // 'backgroundPosition': 'center'
+                                                }}>                                                
+                                            </div>
+                                        </div>
+                                    ))}
+                                </Slide>
+                               
+                                {/* <motion.div
+                                    className="p-2 w-full h-full bg-indigo-400 bg-opacity-75 flex items-center justify-center text-white text-lg"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 0 }}
+                                    whileHover={{
+                                        opacity: 1,
+                                        transition: { duration: 0.5 }
+                                    }}
+                                >
+                                    <p>{project.description}</p>
+                                </motion.div> */}
+                            </div>
+                            {/* <div className='h-80 bg-orange-500 p-[4%]' >
+                                <motion.div
+                                    className="p-2 w-full h-full
+                                 bg-indigo-400 bg-opacity-75 flex items-center justify-center text-white text-lg"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 0 }}
+                                    //animate={{ y: '100%' }}
+                                    whileHover={{
+                                        opacity: 1,
+                                        //boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)",
+                                        transition: { duration: 0.5 }
+                                    }}
+                                >
+                                    <p>{project.description}</p>
+                                </motion.div>
+                            </div> */}
                         </div>
                     ))}
                 </div>
-            </div>
+                {/* Contact */}
+                <div className="container mx-auto px-4 mt-20">
+                    <h2 className="text-2xl font-bold mb-5 text-white bg-indigo-500 p-3 rounded">Contact</h2>
 
+                </div>
+
+            </div>
 
         </div>
     )

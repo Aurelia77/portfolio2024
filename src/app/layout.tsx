@@ -27,15 +27,16 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className="
-        bg-gradient-to-bl 
+      <body 
+      className="
+        bg-gradient-to-r 
         from-indigo-900 
         via-indigo-400 
         to-indigo-900 
-        text-yellow-500
         h-screen
         "
       >
+        
         <PortfolioContextProvider>
           <Navbar />
           <div className="flex flex-col justify-center text-indigo-600 mt-16"
