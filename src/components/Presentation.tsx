@@ -21,21 +21,21 @@ export default function Presentation() {
     }
 
     return <div
-        className='flex justify-between gap-5 max-w-2xl m-auto'
+        className='flex justify-between gap-5 max-w-3xl m-auto'
     //                className='flex justify-between gap-5 max-w-3xl m-auto max-h-52'
 
     >
         {/* TEXTE */}
-        <div className='w-[45%] flex flex-col justify-around'>
+        <div className='text-cyan-300 w-[60%] flex flex-col justify-around'>
             <motion.h1
-                className="text-lg sm:text-2xl md:text-4xl lg:text-5xl font-semibold"
+                className="md:text-4xl lg:text-5xl font-semibold mb-2"
                 initial="hidden"
                 animate="visible"
                 variants={variants}
             >
                 <p>
                     {/* Hello! I&apos;m<br /> */}
-                    <span className='text-2xl sm:text-4xl md:text-6xl lg:text-7xl'> Aurélia Heymann</span>
+                    <span className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl'> Aurélia Heymann</span>
                 </p>
             </motion.h1>
 
@@ -43,7 +43,7 @@ export default function Presentation() {
                 <motion.div
                     key={index}
                     className="text-sm sm:text-lg md:text-xl lg:text-2xl
-                     text-orange-500 flex items-start gap-2
+                     text-white flex items-start gap-2
                      "
                     // text-gray-600 
                     initial="hidden"
@@ -53,7 +53,7 @@ export default function Presentation() {
                 // transition={{ delay: 0.5 }}
                 >
                     <Image
-                        src="/images/icons/blue-star.png"
+                        src="/images/icons/star-cyan.png"
                         alt="Right arrow"
                         width={20}
                         height={20}
@@ -66,7 +66,7 @@ export default function Presentation() {
         </div>
 
         {/* PHOTO (2 tailles de portrait selon la taille de l'écran)  + btn CONTACT ME */}
-        <div className="relative rounded-lg w-[45%] h-[80%] 
+        <div className="relative rounded-lg w-[38%] h-[70%] 
              "
         // overflow-hidden
         >
@@ -77,7 +77,7 @@ export default function Presentation() {
                 src="/images/portrait3.png"
                 alt="Portrait Aurélia Heymann"
                 // className="hidden rounded-lg shadow-lg w-full h-full md:block"
-                className="hidden rounded-lg shadow-xl border-8 border-opacity-40 border-orange-500 w-full h-full md:block "
+                className="hidden rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full md:block "
             />
             <motion.img
                 initial={{ opacity: 0 }}
@@ -85,8 +85,7 @@ export default function Presentation() {
                 transition={{ duration: 1 }}
                 src="/images/portrait2.png"
                 alt="Portrait Aurélia Heymann"
-                className="rounded-lg shadow-lg border-4 border-opacity-40 border-orange-500 w-full h-full md:hidden"
-
+                className="rounded-lg shadow-lg border-4 border-white border-opacity-60 w-full h-full md:hidden"
             />
             <motion.div
                 initial={{ scale: 1, opacity: 0 }}
@@ -100,9 +99,13 @@ export default function Presentation() {
                             boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)",
                             transition: { duration: 0.1 }
                         }}
-                        className="flex justify-center items-center font-bold text-lg py-2 px-4 rounded-full w-full mt-4 transition duration-200 ease-in-out transform hover:shadow-lg bg-gradient-to-r from-orange-500 to-yellow-400 h-16"
+                        className="flex justify-center items-center font-bold 
+                        text-base sm:text-2xl 
+                        uppercase sm:lowercase
+                        py-[4%] sm:py-2 px-4 
+                        rounded-full w-full mt-4 transition duration-200 ease-in-out transform hover:shadow-lg bg-gradient-radial from-cyan-300 to-cyan-500 h-16 text-indigo-900"
                     >
-                        Contact me
+                        Contact&nbsp;me
                     </motion.button>
                 </Link>
             </motion.div>

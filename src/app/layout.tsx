@@ -27,20 +27,27 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body 
-        // bg-gradient-radial from-indigo-200 to-indigo-900
-        className="
-        bg-gradient-to-r 
-        from-indigo-900 
-        via-indigo-400 
-        to-indigo-900 
+      <body
+        // bg-gradient-to-r 
+        // from-indigo-900 
+        // via-indigo-400 
+        // to-indigo-900 
+        className="bg-gradient-radial from-indigo-900 to-indigo-600
         h-screen
         "
       >
-
         <PortfolioContextProvider>
           <Navbar />
-          {children}
+          <div
+            // shadow-lg 
+            className="
+                        relative 
+                        px-4 mt-4
+                        py-2 sm:py-6 md:py-8 lg:py-12
+                        max-w-xl md:max-w-2xl lg:max-w-4xl
+                        mx-auto">
+            {children}
+          </div>
         </PortfolioContextProvider>
       </body>
     </html>

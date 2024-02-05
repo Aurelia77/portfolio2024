@@ -9,12 +9,13 @@ import { usePortfolioContextProvider } from '@/context/portfolioContext';
 export default function Navbar() {
     const [isOpen, setIsOpen] = React.useState(false);
 
+    // BESOIN ????????
     const links = usePortfolioContextProvider()
 
     console.log("links", links)
 
     return (
-        <nav className="bg-indigo-900 text-white p-4 flex justify-between items-center">
+        <nav className="bg-indigo-900 text-white font-semibold p-4 flex justify-between items-center">
             <Link href="/" passHref>
                 <span className="font-bold text-xl cursor-pointer">Home</span>
             </Link>
@@ -26,13 +27,13 @@ export default function Navbar() {
                 >
                     {isOpen
                         ? <Image
-                            src="/images/white-cross.png"
+                            src="/images/icons/white-cross.png"
                             alt="Menu"
                             width={24}
                             height={24}
                         />
                         : <Image
-                            src="/images/burger-menu.png"
+                            src="/images/icons/burger-menu.png"
                             alt="Menu"
                             width={24}
                             height={24}

@@ -21,15 +21,17 @@ export default function Skills() {
     ];
 
     return (
-        <div className="mt-12">
-            <div className="flex flex-wrap justify-center gap-1 sm:gap-2">
+        <div>
+            <div className="flex flex-wrap justify-center max-w-[80%] m-auto
+                gap-[1%] sm:gap-2 
+                ">
                 {skills.map((skill, index) => (
                     <motion.span
                         key={index}
                         className="
+                                rounded-full bg-indigo-100 cursor-pointer mb-1
                                 px-3 py-2 md:px-5 md:py-3
-                                text-sm sm:text-base md:text-lg lg:text-xl rounded-full
-                                bg-indigo-100 cursor-pointer
+                                text-sm sm:text-base md:text-lg lg:text-xl 
                                 "
                         // bg-yellow-400
                         initial={{ opacity: 0, y: -10 }}
@@ -45,11 +47,20 @@ export default function Skills() {
                             skew: 20
                         }}
                     >
+                        {/* Taille des images différentes en fonction de la taille de l'écran */}
                         <Image
+                            className='hidden sm:block'
                             src={`/images/icons/${skill.icon}`}
                             alt={skill.name + " icon"}
                             width={50}
                             height={50}
+                        />
+                        <Image
+                            className='block sm:hidden'
+                            src={`/images/icons/${skill.icon}`}
+                            alt={skill.name + " icon"}
+                            width={25}
+                            height={25}
                         />
                     </motion.span>
                 ))}

@@ -72,8 +72,7 @@ export default function Projects() {
 
     return (
         <div
-            className="mx-auto bg-white
-mt-40 absolute left-0 rounded-3xl">
+            className="mx-auto bg-white left-0 rounded-3xl">
 
 
             {/* // absolute */}

@@ -11,23 +11,25 @@ export default function HomePage() {
 
   return (
     <div>
-      <div className="flex flex-col justify-center text-indigo-600 mt-8 sm:mt-16"
+      <div
       // min-h-[90vh]
       // sm:min-h-screen
       >
-        <div className="
-                    relative 
+        <div className="                     
                     sm:mx-auto
-                    sm:w-full 
+                    sm:w-full
+                    flex flex-col justify-center
+                    gap-6
+                    lg:gap-20 
                     "
         // sm:max-w-4xl 
         >
           {/* A voir si mieux ORANGE ou BLEU ??? et ROTATE 6 ou 12 ??? */}
           {/* inset-0 définit top, right, bottom, et left à 0. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-6 sm:rounded-3xl sm:p-12 max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"></div>
+          {/* <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-6 sm:rounded-3xl sm:p-12 max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"></div> */}
           {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-400 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-6 sm:rounded-3xl"></div> */}
           {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-6 sm:rounded-3xl"></div> */}
-          <div
+          {/* <div
             // shadow-lg 
             className="
                         relative 
@@ -36,15 +38,15 @@ export default function HomePage() {
                         bg-white
                         sm:rounded-3xl sm:p-12 lg:p-16
                         max-w-xl md:max-w-2xl lg:max-w-4xl
-                        mx-auto">
-            {/* <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-12"> */}
-            {/* <div className="max-w-xl mx-auto"> */}
-            <Presentation />
-            <Skills />
-          </div>
+                        mx-auto"> */}
+          {/* <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-12"> */}
+          {/* <div className="max-w-xl mx-auto"> */}
+          <Presentation />
+          <Skills />
+          {/* </div>*/}
+          <Projects />
         </div>
       </div>
-      <Projects />
 
       {/* More (links) */}
       {/* <div className="mt-16 flex flex-wrap justify-around gap-7">
