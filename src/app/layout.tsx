@@ -28,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-      className="
+        // bg-gradient-radial from-indigo-200 to-indigo-900
+        className="
         bg-gradient-to-r 
         from-indigo-900 
         via-indigo-400 
