@@ -49,7 +49,7 @@ export default function Presentation() {
                     initial="hidden"
                     animate="visible"
                     variants={variants}
-                    transition={{ delay: 0.4 + index / 2 }}
+                    transition={{ delay: 0.2 + index / 10 }}
                 // transition={{ delay: 0.5 }}
                 >
                     <Image
@@ -99,10 +99,11 @@ export default function Presentation() {
                             boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)",
                             transition: { duration: 0.1 }
                         }}
+                        // uppercase sm:lowercase ==> mais pas la 1ere lettre en maj !
                         className="flex justify-center items-center font-bold 
                         text-base sm:text-2xl 
-                        uppercase sm:lowercase
                         py-[4%] sm:py-2 px-4 
+                        uppercase sm:normal-case
                         rounded-full w-full mt-4 transition duration-200 ease-in-out transform hover:shadow-lg bg-gradient-radial from-cyan-300 to-cyan-500 h-16 text-indigo-900"
                     >
                         Contact&nbsp;me

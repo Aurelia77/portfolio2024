@@ -22,21 +22,21 @@ export default function Skills() {
 
     return (
         <div>
-            <div className="flex flex-wrap justify-center max-w-[80%] m-auto
+            <div className="flex flex-wrap justify-center max-w-[92%] m-auto
                 gap-[1%] sm:gap-2 
                 ">
                 {skills.map((skill, index) => (
                     <motion.span
                         key={index}
                         className="
-                                rounded-full bg-indigo-100 cursor-pointer mb-1
+                                rounded-full bg-white bg-opacity-80 cursor-pointer mb-1
                                 px-3 py-2 md:px-5 md:py-3
                                 text-sm sm:text-base md:text-lg lg:text-xl 
                                 "
                         // bg-yellow-400
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1 + (index + 1) / 10 }}
+                        transition={{ delay: 0.5 + index / 10 }}
                         // transition={{ delay: (index + 1) / 10 + 0.5 }}
                         title={skill.name}
                         style={{ display: 'flex', alignItems: 'center' }}

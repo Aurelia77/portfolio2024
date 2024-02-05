@@ -20,7 +20,7 @@ export default function HomePage() {
                     sm:w-full
                     flex flex-col justify-center
                     gap-6
-                    lg:gap-20 
+                    sm:gap-12 
                     "
         // sm:max-w-4xl 
         >
