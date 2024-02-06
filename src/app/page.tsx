@@ -4,6 +4,7 @@ import React from 'react';
 import Presentation from '@/components/Presentation';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
+import Contact from '@/components/Contact';
 
 export default function HomePage() {
 
@@ -17,10 +18,10 @@ export default function HomePage() {
       >
         <div className="
                     flex flex-col justify-center
-                    gap-6 sm:gap-12 md:gap-16 lg:gap-20
+                    gap-6 sm:gap-4 md:gap-16 lg:gap-20
                     "
         // sm:max-w-4xl 
-        >      
+        >
           {/* A voir si mieux ORANGE ou BLEU ??? et ROTATE 6 ou 12 ??? */}
           {/* inset-0 définit top, right, bottom, et left à 0. */}
           {/* <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-6 sm:rounded-3xl sm:p-12 max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"></div> */}
@@ -38,10 +39,33 @@ export default function HomePage() {
                         mx-auto"> */}
           {/* <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-12"> */}
           {/* <div className="max-w-xl mx-auto"> */}
-          <Presentation />
-          <Skills />
+
+          <div
+            // shadow-lg 
+            className="
+              px-4 
+              mt-6 sm:mt-10 md:mt-12 lg:mt-16
+              max-w-xl md:max-w-2xl lg:max-w-4xl
+              mx-auto
+            "
+          >
+            <Presentation />
+            <Skills />
+          </div>
+         
           {/* </div>*/}
           <Projects />
+          <div
+            // shadow-lg 
+            className="
+              px-4 
+              mt-6 sm:mt-10 md:mt-12 lg:mt-16
+              max-w-xl md:max-w-2xl lg:max-w-4xl
+              mx-auto
+            "
+          >
+            <Contact />
+          </div>
         </div>
       </div>
 

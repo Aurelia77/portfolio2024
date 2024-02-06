@@ -19,7 +19,7 @@ export default function Navbar() {
         // FCE762   // FFFC31   // F9E900 (jaune)           // text-indigo-700
         // D7F2BA  (vert)
         // D4C5E2 (rose)
-        <nav className="bg-indigo-900 text-white font-semibold p-4 flex justify-between items-center">
+        <nav className="bg-indigo-900 text-white font-semibold p-4 flex justify-between items-center sticky top-0 z-50">
 
         {/* <nav className="bg-gradient-to-r from-orange-500 to-yellow-400 text-indigo-700 font-semibold p-4 flex justify-between items-start"> */}
             <Link href="/" passHref>

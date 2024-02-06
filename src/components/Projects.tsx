@@ -100,7 +100,10 @@ export default function Projects() {
 
     return (
         <div
+            id='projects'
+            // mt-6 sm:mt-10 md:mt-12 lg:mt-16
             className="
+                mx-4 lg:mx-[5%]
             ">
             {/* bg-white */}
 
@@ -115,61 +118,68 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     // overflow-hidden 
                     // border-indigo-500 border-2                        
-                    <div key={index} className="mt-12 rounded-lg bg-white p-5">
-                        <div className='flex justify-start flex-wrap items-center gap-4 mt-3'>
+                    <div key={index} className="rounded-lg bg-white p-5 mb-12">
+                        <div className='flex justify-between flex-wrap items-center gap-4 mt-3'>
                             <h3 className="font-bold text-3xl mr-5">{project.name}</h3>
-                            {project.techno && project.techno.map((tech, index) => (
-                                <motion.span
-                                    key={index}
-                                    className="
-                                        rounded-full bg-cyan-300 bg-opacity-50 cursor-pointer mb-1
-                                        px-2 py-1 md:px-4 md:py-2
-                                        text-sm sm:text-base md:text-lg lg:text-xl 
-                                        "
-                                    // bg-yellow-400
-                                    initial={{ opacity: 0, y: -10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.5 + index / 10 }}
-                                    // transition={{ delay: (index + 1) / 10 + 0.5 }}
-                                    title={tech.name}
-                                    style={{ display: 'flex', alignItems: 'center' }}
-                                    whileHover={{
-                                        scale: 1.2,
-                                        boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)",
-                                        transition: { duration: 0.1 },
-                                        skew: 20
-                                    }}
-                                >
-                                    {/* Taille des images différentes en fonction de la taille de l'écran */}
-                                    <Image
-                                        className='hidden sm:block'
-                                        src={`/images/icons/${tech.icon}`}
-                                        alt={tech.name + " icon"}
-                                        width={30}
-                                        height={30}
-                                    />
-                                    <Image
-                                        className='block sm:hidden'
-                                        src={`/images/icons/${tech.icon}`}
-                                        alt={tech.name + " icon"}
-                                        width={25}
-                                        height={25}
-                                    />
-                                </motion.span>
-                            ))}
-                        </div>
-                        <div
-                            // h-80 
-                            // bg-orange-500 
-                            // p-[4%]
-                            className='
-                                '>
-                            <div className="mt-10">
+                            <div className='flex gap-2 mr-5' >
+                                {project.techno && project.techno.map((tech, index) => (
+                                    <motion.span
+                                        key={index}
+                                        className="
+                                            rounded-full bg-cyan-300 bg-opacity-50 cursor-pointer mb-1
+                                            px-2 py-1 md:px-4 md:py-2
+                                            text-sm sm:text-base md:text-lg lg:text-xl 
+                                            "
+                                        // bg-yellow-400
+                                        initial={{ opacity: 0, y: -10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: 0.5 + index / 10 }}
+                                        // transition={{ delay: (index + 1) / 10 + 0.5 }}
+                                        title={tech.name}
+                                        style={{ display: 'flex', alignItems: 'center' }}
+                                        whileHover={{
+                                            scale: 1.2,
+                                            boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)",
+                                            transition: { duration: 0.1 },
+                                            skew: 20
+                                        }}
+                                    >
+                                        {/* Taille des images différentes en fonction de la taille de l'écran */}
+                                        <Image
+                                            className='hidden sm:block'
+                                            src={`/images/icons/${tech.icon}`}
+                                            alt={tech.name + " icon"}
+                                            width={30}
+                                            height={30}
+                                        />
+                                        <Image
+                                            className='block sm:hidden'
+                                            src={`/images/icons/${tech.icon}`}
+                                            alt={tech.name + " icon"}
+                                            width={25}
+                                            height={25}
+                                        />
+                                    </motion.span>
+                                ))}
+                            </div>
+                            <div className="hidden sm:block">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mr-2">Visit website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mr-2">Source code</a>
-                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">App Overview</a>}
+                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">Introduction Video</a>}
                             </div>
-                            <div className="mt-10">
+                            <div className="block sm:hidden">
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mr-2">Website</a>
+                                <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mr-2">Source</a>
+                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">Video </a>}
+                            </div>
+                        </div>
+                        <div
+                        // h-80
+                        // bg-orange-500 
+                            // p-[4%]
+                            className='
+                                '>                            
+                            <div className="mt-3 sm:mt-7">
                                 <Slide
                                     duration={10000}
                                 >
@@ -182,15 +192,17 @@ export default function Projects() {
                                             <span style={{ ...spanStyle, textAlign: "center" }}>
                                                 {image.caption}
                                             </span>
+                                            
                                             <div
                                                 className=' border-2 border-indigo-500 p-2'>
                                                 <div
                                                     style={{
                                                         ...divStyle,
                                                         'backgroundImage': `url(${image.url})`,
-                                                        'backgroundSize': 'contain',
+                                                        //'backgroundSize': 'cover',
+                                                         'backgroundSize': 'contain',
                                                         'backgroundRepeat': 'no-repeat',
-                                                        'backgroundPosition': 'center'
+                                                        'backgroundPosition': 'center',
                                                     }}>
                                                 </div>
                                             </div>
@@ -235,14 +247,7 @@ export default function Projects() {
                 </div> */}
                     </div>
                 ))}
-            </div>
-
-
-            {/* Contact */}
-            <div className="container mx-auto px-4 mt-20">
-                <h2 className="text-2xl font-bold mb-5 text-white bg-indigo-500 p-3 rounded">Contact</h2>
-            </div>
-
+            </div> 
         </div>
     )
 }
