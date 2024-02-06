@@ -88,9 +88,11 @@ export default function Presentation() {
                 className="rounded-lg shadow-lg border-4 border-white border-opacity-60 w-full h-full md:hidden"
             />
             <motion.div
-                initial={{ scale: 1, opacity: 0 }}
-                animate={{ scale: [1, 1.2, 1], opacity: 1 }}
-                transition={{ times: [0, 0.5, 1], duration: 1.5, delay: 2 }}
+                //initial={{ scale: 1, opacity: 0 }}
+                animate={{ scale: [0, 1.3, 1], 
+                    //opacity: [0, 1, 1]
+                 }}
+                transition={{ times: [0, 0.3, 1], duration: 1.5, delay: 1 }}
             >
                 <Link href="/contact">
                     <motion.button

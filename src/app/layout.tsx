@@ -33,7 +33,7 @@ export default function RootLayout({
         // via-indigo-400 
         // to-indigo-900 
         className="bg-gradient-radial from-indigo-900 to-indigo-600
-        h-screen
+        h-screen relative
         "
       >
         <PortfolioContextProvider>

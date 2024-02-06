@@ -7,9 +7,9 @@ import Link from 'next/link'
 export default function Skills() {
 
     const skills = [
-        { name: "React", icon: "react.png" },
+        { name: "React JS", icon: "react.png" },
         { name: "TypeScript", icon: "ts.png" },
-        { name: "NextJs", icon: "nextjs.png" },
+        { name: "Next JS", icon: "nextjs.png" },
         { name: "TailwindCSS", icon: "tailwindcss.png" },
         { name: "MUI", icon: "mui.png" },
         { name: "Firebase", icon: "firebase.png" },
