@@ -10,6 +10,8 @@ export default function HomePage() {
 
   // const links = usePortfolioContextProvider()
 
+  const containerClassNames = "px-4 mt-6 sm:mt-10 md:mt-12 lg:mt-16 max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+
   return (
     <div>
       <div
@@ -40,30 +42,14 @@ export default function HomePage() {
           {/* <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-12"> */}
           {/* <div className="max-w-xl mx-auto"> */}
 
-          <div
-            // shadow-lg 
-            className="
-              px-4 
-              mt-6 sm:mt-10 md:mt-12 lg:mt-16
-              max-w-xl md:max-w-2xl lg:max-w-4xl
-              mx-auto
-            "
-          >
+          <div className={containerClassNames} >
             <Presentation />
             <Skills />
           </div>
          
           {/* </div>*/}
           <Projects />
-          <div
-            // shadow-lg 
-            className="
-              px-4 
-              mt-6 sm:mt-10 md:mt-12 lg:mt-16
-              max-w-xl md:max-w-2xl lg:max-w-4xl
-              mx-auto
-            "
-          >
+          <div className={containerClassNames} >
             <Contact />
           </div>
         </div>

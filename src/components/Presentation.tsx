@@ -15,11 +15,6 @@ export default function Presentation() {
         <div key={5}><span className='font-bold'>Fluent in English</span></div>,
     ];
 
-    const variants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-    }
-
     return <div
         className='flex justify-between gap-5 max-w-3xl m-auto'
     //                className='flex justify-between gap-5 max-w-3xl m-auto max-h-52'
@@ -29,13 +24,13 @@ export default function Presentation() {
         <div className='text-cyan-300 w-[60%] flex flex-col justify-around'>
             <motion.h1
                 className="md:text-4xl lg:text-5xl font-semibold mb-2"
-                initial="hidden"
-                animate="visible"
-                variants={variants}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                //whileInView="visible"
             >
                 <p>
                     {/* Hello! I&apos;m<br /> */}
-                    <span className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl'> Aurélia Heymann</span>
+                    <span className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl'>Aurélia Heymann</span>
                 </p>
             </motion.h1>
 
@@ -46,9 +41,9 @@ export default function Presentation() {
                      text-white flex items-start gap-2
                      "
                     // text-gray-600 
-                    initial="hidden"
-                    animate="visible"
-                    variants={variants}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    //whileInView="visible"
                     transition={{ delay: 0.2 + index / 10 }}
                 // transition={{ delay: 0.5 }}
                 >
@@ -72,7 +67,8 @@ export default function Presentation() {
         >
             <motion.img
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                //animate={{ opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 transition={{ duration: 2 }}
                 src="/images/portrait3.png"
                 alt="Portrait Aurélia Heymann"
@@ -87,14 +83,14 @@ export default function Presentation() {
                 alt="Portrait Aurélia Heymann"
                 className="rounded-lg shadow-lg border-4 border-white border-opacity-60 w-full h-full md:hidden"
             />
+            {/* BOUTON dans une DIV pour avoir l'effet voulu (sinon il disparait quand on quitte le FOCUS) */}
             <motion.div
                 //initial={{ scale: 1, opacity: 0 }}
-                animate={{ scale: [0, 1.3, 1], 
-                    //opacity: [0, 1, 1]
-                 }}
+                //animate={{ scale: [0, 1.3, 1] }}
+                whileInView={{ scale: [0, 1.3, 1] }}
                 transition={{ times: [0, 0.3, 1], duration: 1.5, delay: 1 }}
             >
-                <Link href="/contact">
+                {/* <Link href="/contact"> */}
                     <motion.button
                         whileHover={{
                             scale: 1.1,
@@ -107,10 +103,11 @@ export default function Presentation() {
                         py-[4%] sm:py-2 px-4 
                         uppercase sm:normal-case
                         rounded-full w-full mt-4 transition duration-200 ease-in-out transform hover:shadow-lg bg-gradient-radial from-cyan-300 to-cyan-500 h-16 text-indigo-900"
+                        onClick={() => window.location.href = '#contact'}
                     >
                         Contact&nbsp;me
                     </motion.button>
-                </Link>
+                {/* </Link> */}
             </motion.div>
             {/* <motion.div 
                      initial={{ opacity: 0 }} 

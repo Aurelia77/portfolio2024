@@ -9,12 +9,15 @@ import 'react-slideshow-image/dist/styles.css'
 
 export default function Projects() {
 
+    const highlightedTextClasses = "font-bold text-indigo-300";
+
     const projects = [
         {
             name: "CRM Project",
             description: <div>
-                <p>I developed a tailored Customer Relationship Management (CRM) app for a friend in the entertainment industry, meeting a <span className='font-bold text-cyan-100'>specific need</span> she had.</p><br/>
-                <p>This tool simplifies contact management by enabling the addition of contacts through an <span className='font-bold text-cyan-100'>INSEE search (thanks to an API)</span>, as well as a <span className='font-bold text-cyan-100'>quick search</span> functionality on the contact list, an <span className='font-bold text-cyan-100'>easy sorting</span>, and a <span className='font-bold text-cyan-100'>scheduling calendar</span> that includes follow-up dates.</p><br/>
+                <p>I developed a tailored Customer Relationship Management (<span className={highlightedTextClasses}>CRM</span>) app for a friend in the entertainment industry, meeting a <span className={highlightedTextClasses}>specific need</span> she had.</p><br/>
+                <p>This tool simplifies contact management by enabling the addition of contacts through an <span className={highlightedTextClasses}>INSEE search</span> (thanks to an <span className={highlightedTextClasses}>API</span>), as well as a <span className={highlightedTextClasses}>quick search</span> functionality on the contact list, an <span className={highlightedTextClasses}>easy sorting</span>, and a <span className={highlightedTextClasses}>scheduling calendar</span> that includes follow-up dates.</p><br/>
+                <p>On the <span className={highlightedTextClasses}>Admin</span> page we can manage contacts <span className={highlightedTextClasses}>categories and files.</span></p><br/>
                 <p>Versatile enough for any solo entrepreneur, it efficiently improves contact management, providing a practical solution.
                 </p>
             </div>,
@@ -82,21 +85,7 @@ export default function Projects() {
             sourceCode: "",
             video: "",
         },
-    ];
-
-    const spanStyle = {
-        padding: '20px',
-        background: '#efefef',
-        color: '#000000',
-    }
-
-    const divStyle = {
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundSize: 'cover',
-        height: '400px'
-    }
+    ];    
 
     return (
         <div
@@ -131,8 +120,9 @@ export default function Projects() {
                                             text-sm sm:text-base md:text-lg lg:text-xl 
                                             "
                                         // bg-yellow-400
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
+                                        initial={{ y: -10 }}
+                                        //animate={{ opacity: 1, y: 0 }}
+                                        whileInView={{ y: 0 }}
                                         transition={{ delay: 0.5 + index / 10 }}
                                         // transition={{ delay: (index + 1) / 10 + 0.5 }}
                                         title={tech.name}
@@ -189,20 +179,16 @@ export default function Projects() {
                                             className='flex flex-col shadow-lg
                                             '
                                         >
-                                            <span style={{ ...spanStyle, textAlign: "center" }}>
+                                            <span className='bg-[#efefef]  text-center p-5'>
                                                 {image.caption}
-                                            </span>
-                                            
+                                            </span>  
                                             <div
-                                                className=' border-2 border-indigo-500 p-2'>
+                                                className='border-2 border-indigo-500 p-2'>
                                                 <div
+                                                    className='flex items-center justify-center bg-no-repeat bg-center bg-contain h-96'
+                                                    //bg-cover
                                                     style={{
-                                                        ...divStyle,
                                                         'backgroundImage': `url(${image.url})`,
-                                                        //'backgroundSize': 'cover',
-                                                         'backgroundSize': 'contain',
-                                                        'backgroundRepeat': 'no-repeat',
-                                                        'backgroundPosition': 'center',
                                                     }}>
                                                 </div>
                                             </div>
