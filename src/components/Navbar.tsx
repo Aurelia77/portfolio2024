@@ -13,8 +13,6 @@ export default function Navbar() {
     // BESOIN ????????
     const links = usePortfolioContextProvider()
 
-    console.log("links", links)
-
     return (
         // FCE762   // FFFC31   // F9E900 (jaune)           // text-indigo-700
         // D7F2BA  (vert)

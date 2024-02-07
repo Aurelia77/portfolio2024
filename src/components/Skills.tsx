@@ -14,6 +14,8 @@ export default function Skills() {
         { name: "MUI", icon: "mui.png" },
         { name: "Firebase", icon: "firebase.png" },
         { name: "Github", icon: "github.png" },
+        { name: "Responsive", icon: "responsive.png" },
+        { name: "Framer Motion", icon: "framer-motion.png" },
         { name: "SQL", icon: "sql.png" },
         { name: "Photoshop", icon: "photoshop.png" },
         { name: "Illustrator", icon: "illustrator.png" },

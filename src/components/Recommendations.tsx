@@ -7,7 +7,7 @@ export default function Recommendations() {
     <div className='
       containerTW
       boxTW
-      '>
+      '>        
       <Image
         src="/images/recommandationJCS.png"
         alt="Recommendations Aurélia Heymann"
@@ -15,7 +15,7 @@ export default function Recommendations() {
         height={200}
         // className="hidden rounded-lg shadow-lg w-full h-full md:block"
         className="rounded-lg shadow-xl border-4 border-white border-opacity-60
-      w-full h-full mx-auto
+      w-1/2 h-full mx-auto
         "
       />
     </div>

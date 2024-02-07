@@ -29,6 +29,8 @@ export default function Projects() {
                 { name: "Firebase", icon: "firebase.png" },
                 { name: "Github", icon: "github.png" },
                 { name: "API", icon: "api.png" },
+                { name: "Responsive", icon: "responsive.png" },
+                { name: "Framer Motion", icon: "framer-motion.png" },
             ],
             link: "https://prospection-freya-aurelia77.vercel.app/",
             sourceCode: "https://github.com/Aurelia77/crm-private.git",
