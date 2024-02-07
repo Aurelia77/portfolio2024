@@ -10,18 +10,7 @@ export default function HomePage() {
 
   // const links = usePortfolioContextProvider()
 
-  const containerClassNames = "px-4 mt-6 sm:mt-10 md:mt-12 lg:mt-16 max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
-
-  return (
-    <div>
-      <div
-      // min-h-[90vh]
-      // sm:min-h-screen
-      >
-        <div className="
-                    flex flex-col justify-center
-                    gap-6 sm:gap-4 md:gap-16 lg:gap-20
-                    "
+  return <div className="containerTW"
         // sm:max-w-4xl 
         >
           {/* A voir si mieux ORANGE ou BLEU ??? et ROTATE 6 ou 12 ??? */}
@@ -42,18 +31,21 @@ export default function HomePage() {
           {/* <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-12"> */}
           {/* <div className="max-w-xl mx-auto"> */}
 
-          <div className={containerClassNames} >
+          <div
+            className='boxTW' 
+          >
             <Presentation />
             <Skills />
           </div>
          
           {/* </div>*/}
           <Projects />
-          <div className={containerClassNames} >
+          <div 
+            className='boxTW' 
+          >
             <Contact />
           </div>
         </div>
-      </div>
 
       {/* More (links) */}
       {/* <div className="mt-16 flex flex-wrap justify-around gap-7">
@@ -76,7 +68,4 @@ export default function HomePage() {
                     </motion.div>
                 ))}
             </div> */}
-
-    </div>
-  );
 }

@@ -12,12 +12,11 @@ export default function Contact() {
   }
 
   return (
-
-    // <div id="contact" >Cliquer pour copier !! Ad mail !!!</div>
-    <div id="contact" className="bg-white shadow rounded-lg p-6 select-none">
+    // Pour que l'ancre soit au dessous de la navbar on met un mt négatif et on met le même pt pour que ça reste au même endroit
+    <div id="contact" className="bg-cyan-100 text-indigo-900 shadow rounded-lg p-6 select-none -mt-20 pt-20 w-60">
       <h2 className="text-2xl font-bold mb-2">{contact.name}</h2>
-      <p className="text-gray-700">{contact.phone}</p>
-      <p className="text-gray-700">{contact.email}</p>
+      <p className="">{contact.phone}</p>
+      <p className="">{contact.email}</p>
       <motion.button
         whileTap={{ scale: 0.85 }}
         onClick={() => navigator.clipboard.writeText(contact.email)}

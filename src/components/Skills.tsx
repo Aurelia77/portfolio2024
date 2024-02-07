@@ -17,7 +17,7 @@ export default function Skills() {
         { name: "SQL", icon: "sql.png" },
         { name: "Photoshop", icon: "photoshop.png" },
         { name: "Illustrator", icon: "illustrator.png" },
-        { name: "Indesign", icon: "indesign.png" },
+        //{ name: "InDesign", icon: "indesign.png" },
     ];
 
     return (

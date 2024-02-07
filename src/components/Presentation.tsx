@@ -21,9 +21,9 @@ export default function Presentation() {
 
     >
         {/* TEXTE */}
-        <div className='text-cyan-300 w-[60%] flex flex-col justify-around'>
+        <div className=' w-[60%] flex flex-col justify-around'>
             <motion.h1
-                className="md:text-4xl lg:text-5xl font-semibold mb-2"
+                className="text-cyan-300 md:text-4xl lg:text-5xl font-semibold mb-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 //whileInView="visible"
@@ -38,7 +38,7 @@ export default function Presentation() {
                 <motion.div
                     key={index}
                     className="text-sm sm:text-lg md:text-xl lg:text-2xl
-                     text-white flex items-start gap-2
+                      flex items-start gap-2
                      "
                     // text-gray-600 
                     initial={{ opacity: 0 }}
@@ -73,7 +73,7 @@ export default function Presentation() {
                 src="/images/portrait3.png"
                 alt="Portrait Aurélia Heymann"
                 // className="hidden rounded-lg shadow-lg w-full h-full md:block"
-                className="hidden rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full md:block "
+                className="hidden md:block rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full  "
             />
             <motion.img
                 initial={{ opacity: 0 }}
@@ -81,17 +81,17 @@ export default function Presentation() {
                 transition={{ duration: 1 }}
                 src="/images/portrait2.png"
                 alt="Portrait Aurélia Heymann"
-                className="rounded-lg shadow-lg border-4 border-white border-opacity-60 w-full h-full md:hidden"
+                className="md:hidden rounded-lg shadow-lg border-4 border-white border-opacity-60 w-full h-full"
             />
             {/* BOUTON dans une DIV pour avoir l'effet voulu (sinon il disparait quand on quitte le FOCUS) */}
             <motion.div
-                //initial={{ scale: 1, opacity: 0 }}
-                //animate={{ scale: [0, 1.3, 1] }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 whileInView={{ scale: [0, 1.3, 1] }}
                 transition={{ times: [0, 0.3, 1], duration: 1.5, delay: 1 }}
             >
-                {/* <Link href="/contact"> */}
-                    <motion.button
+                {/* <Link href="#contact"> */}
+                    <motion.button                        
                         whileHover={{
                             scale: 1.1,
                             boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)",

@@ -91,8 +91,9 @@ export default function Projects() {
         <div
             id='projects'
             // mt-6 sm:mt-10 md:mt-12 lg:mt-16
+            // Pour que l'ancre soit au dessous de la navbar on met un mt négatif et on met le même pt pour que ça reste au même endroit
             className="
-                mx-4 lg:mx-[5%]
+                mx-4 lg:mx-[5%] -mt-20 pt-20
             ">
             {/* bg-white */}
 
@@ -100,16 +101,16 @@ export default function Projects() {
             {/* <div className="inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:rotate-6 sm:rounded-3xl sm:p-12 max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"></div> */}
 
             {/* px-4  */}
-            {/* <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white bg-gradient-to-r from-orange-500 to-yellow-400 p-3">Projects</h2> */}
+            {/* <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold  bg-gradient-to-r from-orange-500 to-yellow-400 p-3">Projects</h2> */}
 
             <div className="grid grid-cols-1 gap-4">
                 {/* lg:grid-cols-2  */}
                 {projects.map((project, index) => (
                     // overflow-hidden 
                     // border-indigo-500 border-2                        
-                    <div key={index} className="rounded-lg bg-white p-5 mb-12">
+                    <div key={index} className="rounded-lg bg-white p-5 mb-12 ">
                         <div className='flex justify-between flex-wrap items-center gap-4 mt-3'>
-                            <h3 className="font-bold text-3xl mr-5">{project.name}</h3>
+                            <h3 className="font-bold text-3xl mr-5 text-indigo-900">{project.name}</h3>
                             <div className='flex gap-2 mr-5' >
                                 {project.techno && project.techno.map((tech, index) => (
                                     <motion.span
@@ -153,14 +154,14 @@ export default function Projects() {
                                 ))}
                             </div>
                             <div className="hidden sm:block">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mr-2">Visit website</a>
-                                <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mr-2">Source code</a>
-                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">Introduction Video</a>}
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Visit website</a>
+                                <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source code</a>
+                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Introduction Video</a>}
                             </div>
                             <div className="block sm:hidden">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded mr-2">Website</a>
-                                <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mr-2">Source</a>
-                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">Video </a>}
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Website</a>
+                                <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source</a>
+                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Video </a>}
                             </div>
                         </div>
                         <div
@@ -198,7 +199,7 @@ export default function Projects() {
                             </div>
                             <div className="mt-3">
                                 <motion.div
-                                    className="p-3 w-full h-full bg-gradient-to-r from-indigo-500 to-indigo-800 flex items-center justify-center text-white text-lg"
+                                    className="p-3 w-full h-full bg-gradient-to-r from-indigo-500 to-indigo-800 flex items-center justify-center  text-lg"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                 // whileHover={{
@@ -207,7 +208,7 @@ export default function Projects() {
                                 // }}
                                 >
                                     <div className="flex items-center justify-center bg-gradient-to-r from-red-600 via-pink-600 to-purple-700">
-                                        <div className="p-4 bg-white bg-opacity-25 rounded shadow-lg m-2 text-white">
+                                        <div className="p-4 bg-white bg-opacity-25 rounded shadow-lg m-2 ">
                                             {project.description}
                                         </div>
                                     </div>
@@ -218,7 +219,7 @@ export default function Projects() {
                         {/* <div className='h-80 bg-orange-500 p-[4%]' >
                     <motion.div
                         className="p-2 w-full h-full
-                     bg-indigo-400 bg-opacity-75 flex items-center justify-center text-white text-lg"
+                     bg-indigo-400 bg-opacity-75 flex items-center justify-center  text-lg"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 0 }}
                         //animate={{ y: '100%' }}
