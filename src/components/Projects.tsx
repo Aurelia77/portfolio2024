@@ -93,7 +93,7 @@ export default function Projects() {
             // mt-6 sm:mt-10 md:mt-12 lg:mt-16
             // Pour que l'ancre soit au dessous de la navbar on met un mt négatif et on met le même pt pour que ça reste au même endroit
             className="
-                mx-4 lg:mx-[5%] -mt-20 pt-20
+                mx-4 lg:mx-[5%] -mt-24 pt-24
             ">
             {/* bg-white */}
 
@@ -153,12 +153,14 @@ export default function Projects() {
                                     </motion.span>
                                 ))}
                             </div>
+                            {/* Grand écran */}
                             <div className="hidden sm:block">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Visit website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source code</a>
                                 {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Introduction Video</a>}
                             </div>
-                            <div className="block sm:hidden">
+                            {/* Petit écran */}
+                            <div className="flex sm:hidden mt-1 flex-wrap gap-y-1">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source</a>
                                 {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Video </a>}
@@ -177,10 +179,9 @@ export default function Projects() {
                                     {project.images && project.images.map((image, index) => (
                                         <div 
                                             key={index} 
-                                            className='flex flex-col shadow-lg
-                                            '
+                                            className='flex flex-col shadow-lg'
                                         >
-                                            <span className='bg-[#efefef]  text-center p-5'>
+                                            <span className='bg-[#efefef] text-indigo-900 text-sm sm:text-lg text-center p-5'>
                                                 {image.caption}
                                             </span>  
                                             <div

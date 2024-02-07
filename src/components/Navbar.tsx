@@ -19,7 +19,7 @@ export default function Navbar() {
         // FCE762   // FFFC31   // F9E900 (jaune)           // text-indigo-700
         // D7F2BA  (vert)
         // D4C5E2 (rose)
-        <nav className="bg-indigo-900 text-white font-semibold p-4 flex justify-between items-center sticky top-0 z-50">
+        <nav className="bg-indigo-900 text-white font-semibold p-2 sm:p-4 flex justify-between items-center sticky top-0 z-50">
 
         {/* <nav className="bg-gradient-to-r from-orange-500 to-yellow-400 text-indigo-700 font-semibold p-4 flex justify-between items-start"> */}
             <Link href="/" passHref>
@@ -27,12 +27,12 @@ export default function Navbar() {
             </Link>
             <div className='flex flex-col items-end flex-grow' >
                 <button
-                    className="p-2 
-                        block sm:hidden"
+                    className="p-2"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     {isOpen
                         ? <Image
+                            className='absolute top-3 right-3'
                             // src="/images/icons/cross-indigo700.png"
                             src="/images/icons/white-cross.png"
                             alt="Menu"
@@ -40,6 +40,7 @@ export default function Navbar() {
                             height={24}
                         />
                         : <Image
+                            className='block sm:hidden'
                             // src="/images/icons/burger-indigo700.png"
                             src="/images/icons/burger-menu.png"
                             alt="Menu"
@@ -49,11 +50,16 @@ export default function Navbar() {
                     }
                 </button>
 
-                <div className={`sm:w-auto
-                ${isOpen 
-                    ? 'block flex-col items-end' 
-                    : 'hidden'} 
-                sm:flex flex-row gap-7 flex-grow`}>
+
+                <div 
+                    // flex-row  flex-grow
+                    className={`sm:w-auto sm:flex gap-7
+                        ${isOpen 
+                            ? 'block flex-col gap-y-1 items-end' 
+                            : 'hidden'
+                        } `
+                        }
+                >
                     {links && links.map((link: any, index: number) => (
                         <motion.p
                             key={index}

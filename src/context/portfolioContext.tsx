@@ -6,10 +6,10 @@ const PortfolioContext = React.createContext<any[]>([])
 
 export const PortfolioContextProvider = ({ children }: any) => {
     const linksCS = [
-        { name: "Selected Work", link: "#projects" },
+        { name: "Selected Work", link: "/#projects" },
         { name: "About Me", link: "/about" },
         { name: "Recommendations", link: "/recommendations" },
-        { name: "Contact", link: "#contact" },
+        { name: "Contact", link: "/#contact" },
     ];
 
     return (
