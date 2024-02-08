@@ -98,11 +98,11 @@ export default function Presentation() {
                             transition: { duration: 0.1 }
                         }}
                         // uppercase sm:lowercase ==> mais pas la 1ere lettre en maj !
-                        className="flex justify-center items-center font-bold 
+                        className="cyanBtn flex justify-center items-center  
                         text-base sm:text-2xl 
                         py-[4%] sm:py-2 px-4 
                         uppercase sm:normal-case
-                        rounded-full w-full mt-4 transition duration-200 ease-in-out transform hover:shadow-lg bg-gradient-radial from-cyan-300 to-cyan-500 h-16 text-indigo-900"
+                        w-full mt-4"
                         onClick={() => window.location.href = '#contact'}
                     >
                         Contact&nbsp;me

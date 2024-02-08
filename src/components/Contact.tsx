@@ -9,33 +9,57 @@ export default function Contact() {
     name: 'Aurélia Heymann',
     phone: '06 14 94 02 03',
     email: 'aurelia.h@hotmail.fr',
-    linkedin: 'https://www.linkedin.com/in/johndoe/',
-    github: 'https://github.com/johndoe',
+    linkedin: 'https://www.linkedin.com/in/aurelia-heymann-37ba689b/',
+    github: 'https://github.com/Aurelia77',
   }
 
   return (
+  
     // Pour que l'ancre soit au dessous de la navbar on met un mt négatif et on met le même pt pour que ça reste au même endroit
-    <div id="contact" className="flex gap-20 bg-cyan-100 text-indigo-900 shadow rounded-lg p-6 select-none -mt-20 pt-20 ">
-      <h2 className="text-2xl font-bold mb-2">{contact.name}</h2>
+    //-mt-20 pt-20
+         
+    <div 
+      id="contact" 
+      className="flex flex-wrap shadow rounded-lg 
+      border-4 border-cyan-300 border-opacity-80 bg-white bg-opacity-20
+      text-xl sm:text-2xl md:text-3xl
+      p-6 sm:p-10 md:p-16 lg:p-20
+      gap-8 sm:gap-12 md:gap-16 lg:gap-22
+      md:mt-2 lg:mt-3
+      mx-4 lg:mx-[10%]
+      "
+    >
+      <h2 className="text-cyan-200 font-bold mb-3
+      text-2xl sm:text-3xl md:text-4xl
+      ">{contact.name}</h2>
 
-      <div className='flex flex-col gap-7' >
+      <div className='flex flex-col gap-7 select-none ' >
         <p className="">{contact.phone}</p>
-        <p className="">{contact.email}</p>
-        <motion.button
-          whileTap={{ scale: 0.85 }}
-          onClick={() => navigator.clipboard.writeText(contact.email)}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Click to copy
-        </motion.button>
-        <div className="mt-4">
-          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 mr-4">
+
+        <div className='flex flex-wrap 
+        gap-4 sm:gap-6 
+        items-center' >
+          <p className="">{contact.email}</p>
+          <motion.button
+            whileTap={{ scale: 0.85 }}
+            onClick={() => navigator.clipboard.writeText(contact.email)}
+            className="cyanBtn px-4 md:text-2xl"
+          >
+            Click to copy
+          </motion.button>
+        </div>
+
+
+
+{/* // voir les attributs ??? et couleur gitHub */}
+        <div className="font-mono mt-8">
+          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-400 mr-8">
             <i className="fab fa-linkedin"></i> LinkedIn
           </a>
-          <a href={contact.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-800">
+          <a href={contact.github} target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:text-cyan-600 mt-1">
             <i className="fab fa-github"></i> GitHub
           </a>
-        </div>
+        </div>       
       </div>
     </div>
   );

@@ -94,8 +94,7 @@ export default function Projects() {
             id='projects'
             // mt-6 sm:mt-10 md:mt-12 lg:mt-16
             // Pour que l'ancre soit au dessous de la navbar on met un mt négatif et on met le même pt pour que ça reste au même endroit
-            className="
-                mx-4 lg:mx-[5%] -mt-24 pt-24
+            className="mx-4 lg:mx-[5%] -mt-32 pt-32
             ">
             {/* bg-white */}
 
@@ -110,7 +109,7 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     // overflow-hidden 
                     // border-indigo-500 border-2                        
-                    <div key={index} className="rounded-lg bg-white p-5 mb-12 ">
+                    <div key={index} className="rounded-lg bg-white p-5 mb-4 sm:mb-8 md:mb-12 ">
                         <div className='flex justify-between flex-wrap items-center gap-4 mt-3'>
                             <h3 className="font-bold text-3xl mr-5 text-indigo-900">{project.name}</h3>
                             <div className='flex gap-2 mr-5' >

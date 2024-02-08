@@ -36,16 +36,11 @@ export default function HomePage() {
           >
             <Presentation />
             <Skills />
-          </div>
-         
-          {/* </div>*/}
-          <Projects />
-          <div 
-            className='boxTW' 
-          >
-            <Contact />
-          </div>
-        </div>
+    </div>
+
+    <Projects />
+    <Contact />
+  </div>
 
       {/* More (links) */}
       {/* <div className="mt-16 flex flex-wrap justify-around gap-7">
