@@ -3,9 +3,26 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
+// import { Document, Page, pdfjs } from 'react-pdf';
+// import { GlobalWorkerOptions } from 'pdfjs-dist';
+// GlobalWorkerOptions.workerSrc = '/pdf.worker.js';
+// //pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
+// //pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.js';
+
+// import { Viewer } from '@react-pdf-viewer/core';
+// import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+// //  styles
+// import '@react-pdf-viewer/core/lib/styles/index.css';
+// import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+// // faire aussi pnpm install canvas
+
+
 export default function About() {
 
   const aboutMeTitle = "About\u00a0me"
+
+  //const defaultLayoutPluginInstance = defaultLayoutPlugin();
+
 
   // Enflish speaker
   // Mike codeur
@@ -73,6 +90,22 @@ export default function About() {
       Download CV
     </motion.a>
 
+
+{/* 
+    <Document file="/images/cv.jpg">
+      <Page pageNumber={1} />
+    </Document>
+
+    <Viewer
+      fileUrl="/images/cv.jpg"
+      plugins={[defaultLayoutPluginInstance]}
+    />  */}
+  
+
+
+
+  
+   
     <motion.img
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -83,11 +116,14 @@ export default function About() {
       // whileInView={{ opacity: 1 }}
       // transition={{ duration: 2 }}
 
-      src="/images/cv.jpg"
+      src="/images/cv300.png"
       alt="CV Aurélia Heymann"
       // className="hidden rounded-lg shadow-lg w-full h-full md:block"
       className="rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full md:block "
     />  
+   
+   
+   
     
   </div>
 }
