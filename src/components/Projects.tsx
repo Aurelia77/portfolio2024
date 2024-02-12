@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Image from 'next/image'
+import AutoDrawing from './AutoDrawing'
 
 import { motion } from 'framer-motion'
 
@@ -55,24 +56,20 @@ export default function Projects() {
             ]
         },
         {
-            name: "Projet 2",
-            description: "Description du projet 2",
+            name: "Auto Drawing",
+            description: "Have fun using this app",
             techno: [
                 { name: "React JS", icon: "react.png" },
-                { name: "TypeScript", icon: "ts.png" },
                 { name: "Next JS", icon: "nextjs.png" },
-                { name: "MUI", icon: "mui.png" },
-                { name: "Firebase", icon: "firebase.png" },
                 { name: "Github", icon: "github.png" },
-                { name: "API", icon: "api.png" },
             ],
             image: "/path/to/image1.jpg",
-            link: "https://link-to-project1.com",
-            sourceCode: "",
+            link: "https://dessin-pink.vercel.app/autoDraw3",
+            sourceCode: "https://github.com/Aurelia77/dessin.git",
             video: "",
         },
         {
-            name: "Projet 3",
+            name: "Movies tracker",
             description: "Description du projet 3",
             techno: [
                 { name: "React JS", icon: "react.png" },
@@ -82,7 +79,8 @@ export default function Projects() {
                 { name: "Firebase", icon: "firebase.png" },
                 { name: "Github", icon: "github.png" },
                 { name: "API", icon: "api.png" },
-            ], image: "/path/to/image1.jpg",
+            ], 
+            image: null,
             link: "https://link-to-project1.com",
             sourceCode: "",
             video: "",
@@ -187,41 +185,44 @@ export default function Projects() {
                             className='
                                 '>
                             <div className="mt-3 sm:mt-7">
-                                <Slide
-                                    duration={10000}
-                                >
-                                    {project.images && project.images.map((image, index) => (
-                                        <div 
-                                            key={index} 
-                                            className='flex flex-col shadow-lg'
-                                        >
-                                            <span className='bg-[#efefef] text-indigo-900 text-sm sm:text-lg text-center p-5'>
-                                                {image.caption}
-                                            </span>
+                                {project.images
+                                    ? <Slide
+                                        duration={10000}
+                                    >
+                                        {project.images.map((image, index) => (
                                             <div
-                                                className='border-2 border-indigo-500 p-2'
+                                                key={index}
+                                                className='flex flex-col shadow-lg'
                                             >
-                                                <Image 
-                                                    src={image.url} 
-                                                    alt="CRM project Aurélia Heymann" 
-                                                    layout="responsive" width="1700" height={900}
-                                                />
-                                                {/* <div
-                                                    className='flex items-center justify-center bg-no-repeat bg-center                                                     
-                                                    bg-contain h-96
-                                                    '
-                                                    // h-96
-                                                    //sm:bg-contain 
-                                                    style={{
-                                                        'backgroundImage': `url(${image.url})`,
-                                                        // 'backgroundPosition': 'center',
-                                                        //height: imageHeight,
-                                                    }}>
-                                                </div> */}
+                                                <span className='bg-[#efefef] text-indigo-900 text-sm sm:text-lg text-center p-5'>
+                                                    {image.caption}
+                                                </span>
+                                                <div
+                                                    className='border-2 border-indigo-500 p-2'
+                                                >
+                                                    <Image
+                                                        src={image.url}
+                                                        alt="CRM project Aurélia Heymann"
+                                                        layout="responsive" width="1700" height={900}
+                                                    />
+                                                    {/* <div
+                                                        className='flex items-center justify-center bg-no-repeat bg-center                                                     
+                                                        bg-contain h-96
+                                                        '
+                                                        // h-96
+                                                        //sm:bg-contain 
+                                                        style={{
+                                                            'backgroundImage': `url(${image.url})`,
+                                                            // 'backgroundPosition': 'center',
+                                                            //height: imageHeight,
+                                                        }}>
+                                                    </div> */}
+                                                </div>
                                             </div>
-                                        </div>
-                                    ))}
-                                </Slide>
+                                        ))}
+                                    </Slide>
+                                    : <AutoDrawing />
+                                }
                             </div>
                             <div className="mt-3">
                                 <motion.div
