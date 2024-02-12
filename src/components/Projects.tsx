@@ -41,7 +41,7 @@ export default function Projects() {
                     caption: "Home page"
                 },
                 {
-                    url: "/images/project1/redim/calendar2.png",
+                    url: "/images/project1/redim/calendar.png",
                     caption: "Calendar page"
                 },
                 {
@@ -49,7 +49,7 @@ export default function Projects() {
                     caption: "View Contact page"
                 },
                 {
-                    url: "/images/project1/redim/admin2.png",
+                    url: "/images/project1/redim/admin.png",
                     caption: "Admin page"
                 },
             ]
@@ -87,7 +87,20 @@ export default function Projects() {
             sourceCode: "",
             video: "",
         },
-    ];    
+    ]; 
+
+    // const [imageHeight, setImageHeight] = React.useState(0);
+
+    // console.log("imageHeight", imageHeight)
+    
+    // React.useEffect(() => {
+    //     const img = new window.Image();
+    //     img.onload = () => setImageHeight(img.height);
+
+    //     if (projects && projects[0] && projects[0].images && projects[0].images[0]) {       
+    //         img.src = projects[0].images[0].url;
+    //     }
+    //   }, []);
 
     return (
         <div
@@ -172,7 +185,7 @@ export default function Projects() {
                         // bg-orange-500 
                             // p-[4%]
                             className='
-                                '>                            
+                                '>
                             <div className="mt-3 sm:mt-7">
                                 <Slide
                                     duration={10000}
@@ -184,16 +197,27 @@ export default function Projects() {
                                         >
                                             <span className='bg-[#efefef] text-indigo-900 text-sm sm:text-lg text-center p-5'>
                                                 {image.caption}
-                                            </span>  
+                                            </span>
                                             <div
-                                                className='border-2 border-indigo-500 p-2'>
-                                                <div
-                                                    className='flex items-center justify-center bg-no-repeat bg-center bg-contain h-96'
-                                                    //bg-cover
+                                                className='border-2 border-indigo-500 p-2'
+                                            >
+                                                <Image 
+                                                    src={image.url} 
+                                                    alt="CRM project Aurélia Heymann" 
+                                                    layout="responsive" width="1700" height={900}
+                                                />
+                                                {/* <div
+                                                    className='flex items-center justify-center bg-no-repeat bg-center                                                     
+                                                    bg-contain h-96
+                                                    '
+                                                    // h-96
+                                                    //sm:bg-contain 
                                                     style={{
                                                         'backgroundImage': `url(${image.url})`,
+                                                        // 'backgroundPosition': 'center',
+                                                        //height: imageHeight,
                                                     }}>
-                                                </div>
+                                                </div> */}
                                             </div>
                                         </div>
                                     ))}

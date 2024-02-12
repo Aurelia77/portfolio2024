@@ -45,7 +45,7 @@ export default function Contact() {
             onClick={() => navigator.clipboard.writeText(contact.email)}
             className="cyanBtn px-4 md:text-2xl"
           >
-            Click to copy
+            Click to copy email
           </motion.button>
         </div>
 
@@ -53,8 +53,21 @@ export default function Contact() {
 
 {/* // voir les attributs ??? et couleur gitHub */}
         <div className="font-mono mt-8">
-          <a href={contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-cyan-300 hover:text-cyan-400 mr-8">
+          <a 
+            href={contact.linkedin} 
+            target="_blank" 
+            //L'attribut rel définit la relation entre la page actuelle et la page liée. noopener et noreferrer sont utilisés pour des raisons de sécurité et de performance lorsque target="_blank" est utilisé. noopener empêche la nouvelle page d'avoir accès à la page qui a ouvert le lien via l'objet window.opener. noreferrer empêche le navigateur d'envoyer la page de référence à la page liée.
+            rel="noopener noreferrer" 
+            className="text-cyan-300 hover:text-cyan-400 mr-8">
+
+
+              {/* Mettre icone Linkin ??? Et git ???? */}
+
+
             <i className="fab fa-linkedin"></i> LinkedIn
+
+
+            
           </a>
           <a href={contact.github} target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:text-cyan-600 mt-1">
             <i className="fab fa-github"></i> GitHub
