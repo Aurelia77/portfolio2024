@@ -69,8 +69,25 @@ export default function Projects() {
             video: "",
         },
         {
+            name: "Kitch clone",
+            description: "TEAM !!! Description du projet 3",
+            techno: [
+                { name: "React JS", icon: "react.png" },
+                { name: "TypeScript", icon: "ts.png" },
+                { name: "Next JS", icon: "nextjs.png" },
+                { name: "MUI", icon: "mui.png" },
+                { name: "Firebase", icon: "firebase.png" },
+                { name: "Github", icon: "github.png" },
+                { name: "API", icon: "api.png" },
+            ], 
+            image: null,
+            link: "https://link-to-project1.com",
+            sourceCode: "",
+            video: "",
+        },
+        {
             name: "Movies tracker",
-            description: "Description du projet 3",
+            description: "Description du projet 4",
             techno: [
                 { name: "React JS", icon: "react.png" },
                 { name: "TypeScript", icon: "ts.png" },
@@ -105,7 +122,7 @@ export default function Projects() {
             id='projects'
             // mt-6 sm:mt-10 md:mt-12 lg:mt-16
             // Pour que l'ancre soit au dessous de la navbar on met un mt négatif et on met le même pt pour que ça reste au même endroit
-            className="mx-4 lg:mx-[5%] -mt-32 pt-32
+            className="sm:mx-[1%] lg:mx-[5%] -mt-32 pt-32
             ">
             {/* bg-white */}
 

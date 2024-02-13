@@ -21,7 +21,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
 
-  const aboutMeTitle = "About\u00a0me"
+  const aboutMeTitle = "About\u00a0me..."
 
   //const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
@@ -56,7 +56,7 @@ export default function About() {
             duration: 0.1,
             delay: 0.5 + index / 5
           }}
-          className="text-4xl font-bold text-cyan-300"
+          className="text-3xl sm:text-4xl font-bold text-cyan-300"
         >
           {letter}
         </motion.span>
@@ -101,12 +101,7 @@ export default function About() {
     <Viewer
       fileUrl="/images/cv.jpg"
       plugins={[defaultLayoutPluginInstance]}
-    />  */}
-  
-
-
-
-  
+    />  */}  
    
     <motion.img
       initial={{ y: -50, opacity: 0 }}
@@ -122,10 +117,7 @@ export default function About() {
       alt="CV Aurélia Heymann"
       // className="hidden rounded-lg shadow-lg w-full h-full md:block"
       className="rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full md:block "
-    />  
-   
-   
-   
+    />   
     
   </div>
 }

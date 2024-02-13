@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from "framer-motion";
+import Image from 'next/image'
 
 export default function Contact() {
 
@@ -52,25 +53,46 @@ export default function Contact() {
 
 
 {/* // voir les attributs ??? et couleur gitHub */}
-        <div className="font-mono mt-8">
+        <div className="font-mono mt-4 sm:mt-8 flex gap-8">
           <a 
             href={contact.linkedin} 
             target="_blank" 
             //L'attribut rel définit la relation entre la page actuelle et la page liée. noopener et noreferrer sont utilisés pour des raisons de sécurité et de performance lorsque target="_blank" est utilisé. noopener empêche la nouvelle page d'avoir accès à la page qui a ouvert le lien via l'objet window.opener. noreferrer empêche le navigateur d'envoyer la page de référence à la page liée.
             rel="noopener noreferrer" 
-            className="text-cyan-300 hover:text-cyan-400 mr-8">
-
-
-              {/* Mettre icone Linkin ??? Et git ???? */}
-
-
-            <i className="fab fa-linkedin"></i> LinkedIn
-
-
-            
+            className="text-cyan-300 hover:text-cyan-400 mr-8 flex items-center gap-3"
+          >
+            <Image
+              className='hidden sm:block'
+              src="/images/icons/linkedin.png"
+              alt="github"
+              width={35}
+              height={35}
+            />
+            <Image
+              className='block sm:hidden'
+              src="/images/icons/linkedin.png"
+              alt="github"
+              width={30}
+              height={30}
+            /> 
+            LinkedIn
           </a>
-          <a href={contact.github} target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:text-cyan-600 mt-1">
-            <i className="fab fa-github"></i> GitHub
+          <a href={contact.github} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-500 mt-1 flex items-center gap-4">
+            <Image
+              className='hidden sm:block'
+              src="/images/icons/blue-github.png"
+              alt="github"
+              width={35}
+              height={35}
+            />
+            <Image
+              className='block sm:hidden'
+              src="/images/icons/blue-github.png"
+              alt="github"
+              width={30}
+              height={30}
+            />
+            GitHub
           </a>
         </div>       
       </div>
