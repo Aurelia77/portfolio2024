@@ -23,7 +23,7 @@ export default function Presentation() {
         {/* TEXTE */}
         <div className=' w-[60%] flex flex-col justify-around'>
             <motion.h1
-                className="text-cyan-300 md:text-4xl lg:text-5xl font-semibold mb-2"
+                className="text-cyan-300 md:text-4xl lg:text-5xl font-semibold mb-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 //whileInView="visible"
@@ -37,9 +37,7 @@ export default function Presentation() {
             {description.map((descr, index) => (
                 <motion.div
                     key={index}
-                    className="text-sm sm:text-lg md:text-xl lg:text-2xl
-                      flex items-start gap-2
-                     "
+                    className={(index % 2 === 1 ? "text-cyan-100" : "" )+ " text-base sm:text-lg md:text-xl lg:text-2xl flex items-start gap-2 mt-2"}
                     // text-gray-600 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -52,7 +50,7 @@ export default function Presentation() {
                         alt="Right arrow"
                         width={20}
                         height={20}
-                        className='hidden md:block mt-1'
+                        className='hidden sm:block mt-1'
                     />
                     {descr}
                 </motion.div>

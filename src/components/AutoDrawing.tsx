@@ -87,9 +87,9 @@ export default function AutoDraw3() {
     }
 
     return (
-        <div className=' w-full h-full bg-[#ccc] flex justify-around flex-wrap-reverse md:flex-wrap text-black'>
+        <div className=' w-full h-full bg-[#ccc] flex justify-around flex-wrap-reverse text-black'>
             <div ref={canvasContainer} className=' 
-                h-1/2 sm:h-screen
+                h-[60vh] sm:h-screen
                 flex-grow m-auto' 
             >
                 <canvas
@@ -97,7 +97,7 @@ export default function AutoDraw3() {
                     ref={canvasRef} className='border border-black rounded-md m-auto' />                
             </div>
             <div className='w-[592px]'>
-                <div className=' flex my-10 flex-wrap m-1'>
+                <div className=' flex my-1 sm:my-10 flex-wrap m-1 gap-2'>
                     <label className='m-auto font-bold'>
                         Couleur de ligne :
                         <ColorPicker
@@ -113,8 +113,8 @@ export default function AutoDraw3() {
                         />
                     </label>
                 </div>
-                <div className=' m-5 p-2 border border-[#4ce279] rounded-md '>
-                    <div className=' flex justify-between mb-10'>
+                <div className=' m-2 sm:m-5 p-2 border border-[#4ce279] rounded-md '>
+                    <div className=' flex justify-between mb-2'>
                         {!running ?
                             <button type='button' className='p-2 rounded-md border border-black bg-green-600 text-white font-bold w-full text-lg ' onClick={start} >LANCER !</button>
                             :
@@ -122,29 +122,37 @@ export default function AutoDraw3() {
                         }
                     </div>
                     <div className='my-2 flex items-center '>
-                        <label className=' mr-4 p-1 font-bold' htmlFor="lineWidth">Epaisseur de la ligne
-                        <input className=' w-10 pl-3 mx-2 ' type="number" id="lineWidth" name="lineWidth" value={lineWidth} onChange={(e) => setLineWidth(parseInt(e.target.value))}/></label>
+                        <label className=' mr-4 p-1 font-bold' htmlFor="lineWidth">
+                            Epaisseur de la ligne
+                            <input className=' w-12 pl-1 mx-2 ' type="number" id="lineWidth" name="lineWidth" value={lineWidth} onChange={(e) => setLineWidth(parseInt(e.target.value))}/>
+                        </label>
                         <div className=' w-[50%] ' 
                         style={{backgroundColor:lineColor, height:`${lineWidth}px`}} 
                         ></div>
                     </div>
-                    <div className='my-2 flex items-center '>
-                        <label className=' mr-4 p-1 font-bold' htmlFor="circlesWidth">Epaisseur des cercles
-                        <input className=' w-10 pl-3 mx-2' type="number" id="circlesWidth" name="circlesWidth" value={circlesWidth} onChange={(e) => setCirclesWidth(parseInt(e.target.value))} /></label>
-                        <div 
-                            className={`rounded-full border border-black`}
-                            style={{
-                                backgroundColor:circlesColor, 
-                                width:`${circlesWidth}px`, 
-                                height:`${circlesWidth}px`, 
-                                //borderRadius:`${circlesWidth/2}px`
-                            }} 
-                        >
+                    <div className='flex justify-between gap-3'>
+                        <div className='my-2 flex items-center justify-between flex-wrap gap-2'>
+                            <label className=' p-1 font-bold' htmlFor="circlesWidth">
+                                Epaisseur des cercles
+                                <input className=' w-12 pl-1 mx-2' type="number" id="circlesWidth" name="circlesWidth" value={circlesWidth} onChange={(e) => setCirclesWidth(parseInt(e.target.value))} />
+                            </label>
+                            <div 
+                                className={`rounded-full border border-black`}
+                                style={{
+                                    backgroundColor:circlesColor, 
+                                    width:`${circlesWidth}px`, 
+                                    height:`${circlesWidth}px`, 
+                                    //borderRadius:`${circlesWidth/2}px`
+                                }} 
+                            >
+                            </div>
                         </div>
-                    </div>
-                    <div className='my-2'>
-                        <label className='mr-4 p-1 font-bold' htmlFor="xMove">Direction (abscisse X)
-                        <input className='w-10 pl-3 mx-2 ' type="number" id="xMove" name="xMove" value={xMove} onChange={(e) => setXMove(parseInt(e.target.value))} /></label>
+                        <div className='my-2'>
+                            <label className='mr-4 p-1 font-bold' htmlFor="xMove">
+                                Direction (abscisse X)
+                                <input className='w-12 pl-1 mx-2 ' type="number" id="xMove" name="xMove" value={xMove} onChange={(e) => setXMove(parseInt(e.target.value))} />
+                            </label>
+                        </div>
                     </div>
                     {/* <div className='flex m-1'>
                         <label className=' mr-4 p-1' htmlFor="intY">Interval Y : </label>
@@ -165,7 +173,7 @@ export default function AutoDraw3() {
                         }
                     </div> */}
                     <div>
-                        <button type='button' className='p-2 rounded-md border border-black bg-yellow-400 w-[50%] mt-5' onClick={clear}>Effacer</button>
+                        <button type='button' className='p-2 rounded-md border border-black bg-yellow-400 w-[50%] mt-1 sm:mt-5' onClick={clear}>Effacer</button>
                     </div>
                 </div>
             </div>
