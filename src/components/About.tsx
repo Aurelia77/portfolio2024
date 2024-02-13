@@ -3,6 +3,8 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
+// IMPOSSIBLE DE METTRE UN PDF !!! => Module parse failed: Unexpected character '�' (1:2) You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+// => j'ai essayé pendant 2h avec les forums (plein de solutions mais ne marchent pas pour moi) et copilot mais rien ne marche !!! => donc j'ai mis à la place une image en HD
 // import { Document, Page, pdfjs } from 'react-pdf';
 // import { GlobalWorkerOptions } from 'pdfjs-dist';
 // GlobalWorkerOptions.workerSrc = '/pdf.worker.js';

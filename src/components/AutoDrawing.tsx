@@ -87,20 +87,31 @@ export default function AutoDraw3() {
     }
 
     return (
-        <div className=' w-full h-full bg-[#ccc] flex justify-around flex-wrap text-black'>
-            <div ref={canvasContainer} className=' h-1/2 sm:h-screen flex-grow' >
+        <div className=' w-full h-full bg-[#ccc] flex justify-around flex-wrap-reverse md:flex-wrap text-black'>
+            <div ref={canvasContainer} className=' 
+                h-1/2 sm:h-screen
+                flex-grow m-auto' 
+            >
                 <canvas
                     //onMouseDown={onMouseDown} 
-                    ref={canvasRef} className='border border-black rounded-md ' />                
+                    ref={canvasRef} className='border border-black rounded-md m-auto' />                
             </div>
             <div className='w-[592px]'>
-                <div className=' flex my-10 flex-wrap'>
-                    <label className=' m-2 font-bold'>Couleur de ligne :
-                        <ColorPicker color={lineColor} onChange={(e) => setLineColor(e.hex)} />
+                <div className=' flex my-10 flex-wrap m-1'>
+                    <label className='m-auto font-bold'>
+                        Couleur de ligne :
+                        <ColorPicker
+                            color={lineColor}
+                            onChange={(e) => setLineColor(e.hex)}
+                        />
                     </label>
-                    <label className=' m-2 font-bold'>Couleur des cercles :
-                        <ColorPicker color={circlesColor} onChange={(e) => setCirclesColor(e.hex)} />                        
-                    </label>                    
+                    <label className=' m-auto font-bold'>
+                        Couleur des cercles :
+                        <ColorPicker
+                            color={circlesColor}
+                            onChange={(e) => setCirclesColor(e.hex)}
+                        />
+                    </label>
                 </div>
                 <div className=' m-5 p-2 border border-[#4ce279] rounded-md '>
                     <div className=' flex justify-between mb-10'>
