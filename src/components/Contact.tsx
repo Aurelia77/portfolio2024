@@ -24,10 +24,11 @@ export default function Contact() {
       className="flex flex-wrap shadow rounded-lg 
       border-4 border-cyan-300 border-opacity-80 bg-white bg-opacity-20
       text-xl sm:text-2xl md:text-3xl
-      p-6 sm:p-10 md:p-16 lg:p-20
+      pb-20 pt-14 px-6 sm:p-14 md:p-16 lg:p-20
       gap-8 sm:gap-12 md:gap-16 lg:gap-22
       md:mt-2 lg:mt-3
       mx-4 lg:mx-[10%]
+      mb-[50%] sm:mb-[40%] md:mb-[25%] lg:mb-[13%]
       "
     >
       <h2 className="text-cyan-200 font-bold mb-3
@@ -53,7 +54,7 @@ export default function Contact() {
 
 
 {/* // voir les attributs ??? et couleur gitHub */}
-        <div className="font-mono mt-4 sm:mt-8 flex gap-8">
+        <div className="font-mono mt-4 sm:mt-8 flex gap-8 flex-wrap">
           <a 
             href={contact.linkedin} 
             target="_blank" 
