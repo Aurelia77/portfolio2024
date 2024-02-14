@@ -70,10 +70,8 @@ export default function Recommendations() {
             transition={{ duration: 1, delay: 1.5 }}
             className=" text-lg sm:text-2xl font-semibold mb-2 text-center"
           >
-            ...from my friend for whom I developed the CRM app
+            ...from the person for whom I developed the CRM app
           </motion.h1>
-
-
           <motion.img
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
