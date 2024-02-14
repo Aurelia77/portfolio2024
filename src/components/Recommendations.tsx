@@ -82,7 +82,7 @@ export default function Recommendations() {
             // whileInView={{ opacity: 1 }}
             // transition={{ duration: 2 }}
 
-            src="/images/recommandationLauriane.jpg"
+            src="/images/recommandationLauriane.png"
             alt="Aurélia Heymann recommendations"
             // className="hidden rounded-lg shadow-lg w-full h-full md:block"
             className="rounded-lg shadow-xl border-4 border-white border-opacity-60 md:block "
