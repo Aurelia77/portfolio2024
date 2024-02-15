@@ -37,7 +37,7 @@ export default function Presentation() {
             {description.map((descr, index) => (
                 <motion.div
                     key={index}
-                    className={(index % 2 === 1 ? "text-cyan-100" : "" )+ " text-base sm:text-lg md:text-xl lg:text-2xl flex items-start gap-2 mt-2"}
+                    className={(index % 2 === 1 ? "text-cyan-200" : "" )+ " text-base sm:text-lg md:text-xl lg:text-2xl flex items-start gap-2 mt-2"}
                     // text-gray-600 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

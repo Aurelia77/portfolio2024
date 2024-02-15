@@ -10,25 +10,26 @@ import 'react-slideshow-image/dist/styles.css'
 
 export default function Projects() {
 
-    const highlightedTextClasses = "font-bold text-indigo-300";
+    const highlightedTextClasses = "font-bold text-indigo-200 text-shadow";
 
     const projects = [
         {
             name: "CRM Project",
-            description: <div>
-                <p>I developed a tailored Customer Relationship Management (<span className={highlightedTextClasses}>CRM</span>) app for a friend in the entertainment industry, meeting a <span className={highlightedTextClasses}>specific need</span> she had.</p><br/>
-                <p>This tool simplifies contact management by enabling the addition of contacts through an <span className={highlightedTextClasses}>INSEE search</span> (thanks to an <span className={highlightedTextClasses}>API</span>), as well as a <span className={highlightedTextClasses}>quick search</span> functionality on the contact list, an <span className={highlightedTextClasses}>easy sorting</span>, and a <span className={highlightedTextClasses}>scheduling calendar</span> that includes follow-up dates.</p><br/>
-                <p>On the <span className={highlightedTextClasses}>Admin</span> page we can manage contacts <span className={highlightedTextClasses}>categories and files.</span></p><br/>
-                <p>Versatile enough for any solo entrepreneur, it efficiently improves contact management, providing a practical solution.
-                </p>
-            </div>,
+            description: 
+                <div>
+                    <h2>My last and more important project :</h2><br/>
+                    <p>I developed a tailored Customer Relationship Management (<span className={highlightedTextClasses}>CRM</span>) app for a self-employed person in the entertainment industry, meeting a <span className={highlightedTextClasses}>specific need</span> she had.</p><br/>
+                    <p>This tool simplifies contact management by enabling the addition of contacts through an <span className={highlightedTextClasses}>INSEE search</span> (thanks to an <span className={highlightedTextClasses}>API</span>), as well as a <span className={highlightedTextClasses}>quick search</span> functionality on the contact list, an <span className={highlightedTextClasses}>easy sorting</span>, and a <span className={highlightedTextClasses}>scheduling calendar</span> that includes follow-up dates.</p><br/>
+                    <p>On the <span className={highlightedTextClasses}>Admin</span> page we can manage contacts <span className={highlightedTextClasses}>categories and files.</span></p><br/>
+                    <p>Versatile enough for any solo entrepreneur, it efficiently improves contact management, providing a practical solution.
+                    </p>
+                </div>,
             techno: [
                 { name: "React JS", icon: "react.png" },
                 { name: "TypeScript", icon: "ts.png" },
                 { name: "Next JS", icon: "nextjs.png" },
                 { name: "MUI", icon: "mui.png" },
                 { name: "Firebase", icon: "firebase.png" },
-                { name: "Github", icon: "github.png" },
                 { name: "API", icon: "api.png" },
                 { name: "Responsive", icon: "responsive.png" },
                 { name: "Framer Motion", icon: "framer-motion.png" },
@@ -38,48 +39,64 @@ export default function Projects() {
             video: "xxx",
             images: [
                 {
-                    url: "/images/project1/redim/home.png",
+                    url: "/images/projectCRM/home.png",
                     caption: "Home page"
                 },
                 {
-                    url: "/images/project1/redim/calendar.png",
+                    url: "/images/projectCRM/calendar.png",
                     caption: "Calendar page"
                 },
                 {
-                    url: "/images/project1/redim/view-contact.png",
+                    url: "/images/projectCRM/view-contact.png",
                     caption: "View Contact page"
                 },
                 {
-                    url: "/images/project1/redim/admin.png",
+                    url: "/images/projectCRM/admin.png",
                     caption: "Admin page"
                 },
             ]
         },
         {
             name: "Auto Drawing",
-            description: "Have fun using this app",
+            description: 
+                <div>
+                    <h2>Have fun using this app</h2><br/>
+                    <p>This lets you create endless, flowing lines that bounce around the frame. With a simple click, you can launch a line that will continuously draw itself, changing direction whenever it hits the edge of the frame.
+                    </p>
+                </div>,
             techno: [
                 { name: "React JS", icon: "react.png" },
                 { name: "Next JS", icon: "nextjs.png" },
-                { name: "Github", icon: "github.png" },
+                { name: "TailwindCSS", icon: "tailwindcss.png" },
             ],
-            image: "/path/to/image1.jpg",
             link: "https://dessin-pink.vercel.app/autoDraw3",
             sourceCode: "https://github.com/Aurelia77/dessin.git",
             video: "",
         },
         {
-            name: "Kitch clone",
-            description: "TEAM !!! Description du projet 3",
+            name: "Kitch : Twitch clone",
+            description: 
+                <div>
+                    <h2>Team project</h2><br/>
+                    <p>In mid-2023, after finishing my online React training, I collaborated with a team of fellow Mike Codeur learners to build a Twitch website clone. This project marked my first experience with NextJS and TypeScript, and it proved to be a thrilling learning adventure. To this day, I find TypeScript indispensable and incorporate it into every project I work on.</p><br/>
+                    <p>We utilized the Twitch API to fetch and display data within our web app.</p><br/>
+                    <p>Collaborating with my teammates was an enriching experience. We honed our communication skills, efficiently divided tasks, and learned to work harmoniously towards a shared objective. However, it wasn&apos;t always easy. We faced challenges like time management, differing viewpoints, and technical difficulties.</p>
+                    <p>Despite these obstacles, the project was a valuable learning experience. I significantly improved my React skills, gained valuable experience with APIs, and strengthened my teamwork abilities.</p>
+                </div>,
             techno: [
                 { name: "React JS", icon: "react.png" },
                 { name: "TypeScript", icon: "ts.png" },
                 { name: "Next JS", icon: "nextjs.png" },
-                { name: "Github", icon: "github.png" },
+                { name: "TailwindCSS", icon: "tailwindcss.png" },
                 { name: "API", icon: "api.png" },
-            ], 
-            image: null,
-            link: "https://aurelia77-kitch-projet-groupe.vercel.app/",
+            ],
+            images: [
+                {
+                    url: "/images/projectKITCH/img1.png",
+                    caption: "Home page"
+                },
+            ],
+            link: "https://kitch-team-project.vercel.app/",
             sourceCode: "https://github.com/Aurelia77/kitch-team-project.git",
             video: "",
         },    
@@ -163,17 +180,17 @@ export default function Projects() {
                                     </motion.span>
                                 ))}
                             </div>
-                            {/* Grand écran */}
+                            {/* BTNs Grand écran */}
                             <div className="hidden sm:block">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Visit website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source code</a>
-                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Introduction Video</a>}
+                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Live Demo</a>}
                             </div>
-                            {/* Petit écran */}
+                            {/* BTNs Petit écran */}
                             <div className="flex sm:hidden mt-1 flex-wrap gap-y-1">
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source</a>
-                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Video </a>}
+                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Demo</a>}
                             </div>
                         </div>
                         <div

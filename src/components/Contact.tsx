@@ -28,8 +28,9 @@ export default function Contact() {
       gap-8 sm:gap-12 md:gap-16 lg:gap-22
       md:mt-2 lg:mt-3
       mx-4 lg:mx-[10%]
-      mb-[50%] sm:mb-[40%] md:mb-[25%] lg:mb-[13%]
+      mb-5
       "
+      //mb-[50%] sm:mb-[40%] md:mb-[25%] lg:mb-[13%]
     >
       <h2 className="text-cyan-200 font-bold mb-3
       text-2xl sm:text-3xl md:text-4xl

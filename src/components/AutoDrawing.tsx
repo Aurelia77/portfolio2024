@@ -14,10 +14,10 @@ import ColorPicker from 'react-pick-color';  // pnpm install react-pick-color
 export default function AutoDraw3() {
     const canvasContainer = React.useRef<HTMLDivElement>(null)
     const canvasRef = React.useRef<HTMLCanvasElement>(null) // On récupère la référence du canvas (en mettant la souris sur le HTML canvas on voit le type (pour TS)  )
-    const [lineColor, setLineColor] = React.useState<string>('#000')
+    const [lineColor, setLineColor] = React.useState<string>('indigo')
     const [circlesColor, setCirclesColor] = React.useState<string>('cyan')
-    const [lineWidth, setLineWidth] = React.useState<number>(3)
-    const [circlesWidth, setCirclesWidth] = React.useState<number>(5)
+    const [lineWidth, setLineWidth] = React.useState<number>(10)
+    const [circlesWidth, setCirclesWidth] = React.useState<number>(10)
     const [fromPoint, setFromPoint] = React.useState<Point>({ x: 0, y: 0 }) // On mettra à jour le point de départ ensuite dans le useEffect
     const [xMove, setXMove] = React.useState<number>(3)
     const [yMove, setYMove] = React.useState<number>(0)
@@ -116,14 +116,22 @@ export default function AutoDraw3() {
                 <div className=' m-2 sm:m-5 p-2 border border-[#4ce279] rounded-md '>
                     <div className=' flex justify-between mb-2'>
                         {!running 
-                            ? <button type='button' className='p-2 rounded-md border border-black bg-green-600 text-white font-bold w-full text-lg ' onClick={start} >LANCER !</button>
+                            ? <button type='button' className='p-2 rounded-md border border-black bg-green-600 text-white font-bold w-full text-lg ' onClick={start} >GO !</button>
                             : <button type='button' className='p-2 rounded-md border border-black bg-red-700 text-white font-bold w-full text-lg ' onClick={stop} >STOP !</button>
                         }
                     </div>
                     <div className='my-2 flex items-center '>
                         <label className=' mr-4 p-1 font-bold' htmlFor="lineWidth">
                             Epaisseur de la ligne
-                            <input className=' w-12 pl-1 mx-2 ' type="number" id="lineWidth" name="lineWidth" value={lineWidth} onChange={(e) => setLineWidth(parseInt(e.target.value))}/>
+                            <input 
+                                className=' w-12 pl-1 mx-2 ' 
+                                type="number"  
+                                min="0" 
+                                id="lineWidth" 
+                                name="lineWidth" 
+                                value={lineWidth} 
+                                onChange={(e) => setLineWidth(parseInt(e.target.value))}
+                            />
                         </label>
                         <div className=' w-[50%] ' 
                         style={{backgroundColor:lineColor, height:`${lineWidth}px`}} 
@@ -133,7 +141,15 @@ export default function AutoDraw3() {
                         <div className='my-2 flex items-center justify-between flex-wrap gap-2'>
                             <label className=' p-1 font-bold' htmlFor="circlesWidth">
                                 Epaisseur des cercles
-                                <input className=' w-12 pl-1 mx-2' type="number" id="circlesWidth" name="circlesWidth" value={circlesWidth} onChange={(e) => setCirclesWidth(parseInt(e.target.value))} />
+                                <input 
+                                    className=' w-12 pl-1 mx-2' 
+                                    type="number" 
+                                    min="0"  
+                                    id="circlesWidth" 
+                                    name="circlesWidth" 
+                                    value={circlesWidth} 
+                                    onChange={(e) => setCirclesWidth(parseInt(e.target.value))} 
+                                />
                             </label>
                             <div 
                                 className={`rounded-full border border-black`}

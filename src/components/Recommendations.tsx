@@ -12,7 +12,7 @@ export default function Recommendations() {
     // boxTW + on ecrase max-w pour que ce soit plus grand
       className='boxTW lg:max-w-full'
     >
-      <div className='flex' >
+      <div className='flex flex-wrap' >
         {recommendationTitle.split('').map((letter, index) => (
           <motion.span
             key={index}
