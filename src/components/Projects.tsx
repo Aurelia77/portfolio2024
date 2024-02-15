@@ -10,6 +10,8 @@ import 'react-slideshow-image/dist/styles.css'
 
 export default function Projects() {
 
+    const [isModalVideoOpen, setIsModalVideoOpen] = React.useState(false);
+
     const highlightedTextClasses = "font-bold text-indigo-200 text-shadow";
 
     const projects = [
@@ -36,7 +38,7 @@ export default function Projects() {
             ],
             link: "https://prospection-freya-aurelia77.vercel.app/",
             sourceCode: "https://github.com/Aurelia77/crm-private.git",
-            video: "xxx",
+            video: "/videos/VideoCRM.mp4",
             images: [
                 {
                     url: "/images/projectCRM/home.png",
@@ -181,10 +183,25 @@ export default function Projects() {
                                 ))}
                             </div>
                             {/* BTNs Grand écran */}
-                            <div className="hidden sm:block">
+                            <div className="hidden sm:block"> 
                                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Visit website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source code</a>
-                                {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Live Demo</a>}
+                                {project.video &&
+                                    <>
+                                        <button
+                                            className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded"
+                                            onClick={() => setIsModalVideoOpen(!isModalVideoOpen)}
+                                        >
+                                            Live Demo
+                                        </button>                                    
+                                        {isModalVideoOpen && <video width="320" height="240" controls className='m-auto mt-1'>
+                                            <source
+                                                src={project.video}
+                                                type="video/mp4" />
+                                            Votre navigateur ne supporte pas la balise vidéo.
+                                        </video>}
+                                    </>
+                                }
                             </div>
                             {/* BTNs Petit écran */}
                             <div className="flex sm:hidden mt-1 flex-wrap gap-y-1">
