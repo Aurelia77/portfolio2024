@@ -36,7 +36,7 @@ export default function Projects() {
                 { name: "Responsive", icon: "responsive.png" },
                 { name: "Framer Motion", icon: "framer-motion.png" },
             ],
-            link: "https://prospection-freya-aurelia77.vercel.app/",
+            link: "https://crm-public.vercel.app",
             sourceCode: "https://github.com/Aurelia77/crm-private.git",
             video: "/videos/VideoCRM.mp4",
             images: [
