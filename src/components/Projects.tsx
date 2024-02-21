@@ -98,6 +98,10 @@ export default function Projects() {
                     url: "/images/projectKITCH/img1.png",
                     caption: "Home page"
                 },
+                {
+                    url: "/images/projectKITCH/img2.png",
+                    caption: "Channel page"
+                },
             ],
             link: "https://kitch-team-project.vercel.app/",
             sourceCode: "https://github.com/Aurelia77/kitch-team-project.git",
@@ -220,7 +224,7 @@ export default function Projects() {
                             <div className="mt-3 sm:mt-7">
                                 {project.images
                                     ? <Slide
-                                        duration={10000}
+                                        duration={3000}
                                     >
                                         {project.images.map((image, index) => (
                                             <div
