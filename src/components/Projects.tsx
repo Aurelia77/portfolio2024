@@ -80,9 +80,10 @@ export default function Projects() {
             description: 
                 <div>
                     <h2>Team project</h2><br/>
-                    <p>In mid-2023, after finishing my online React training, I collaborated with a team of fellow Mike Codeur learners to build a Twitch website clone. This project marked my first experience with NextJS and TypeScript, and it proved to be a thrilling learning adventure. To this day, I find TypeScript indispensable and incorporate it into every project I work on.</p><br/>
+                    <p>In mid-2023, after finishing my online React training with the formateur Mike Codeur, I collaborated with a team of other learners to build a Twitch website clone. This project marked my first experience with NextJS and TypeScript, and it proved to be a thrilling learning adventure. To this day, I find TypeScript indispensable and incorporate it into every project I work on.</p><br/>
                     <p>We utilized the Twitch API to fetch and display data within our web app.</p><br/>
                     <p>Collaborating with my teammates was an enriching experience. We honed our communication skills, efficiently divided tasks, and learned to work harmoniously towards a shared objective. However, it wasn&apos;t always easy. We faced challenges like time management, differing viewpoints, and technical difficulties.</p>
+                    <p>Unfortunately, the project was not completed due to the withdrawal of some team members.</p>
                     <p>Despite these obstacles, the project was a valuable learning experience. I significantly improved my React skills, gained valuable experience with APIs, and strengthened my teamwork abilities.</p>
                 </div>,
             techno: [
