@@ -31,11 +31,10 @@ export default function Skills() {
                 <motion.span
                     key={index}
                     className="
-                                rounded-full bg-white bg-opacity-80 cursor-pointer mb-1
-                                px-3 py-2 md:px-5 md:py-3
-                                text-sm sm:text-base md:text-lg lg:text-xl 
-                                "
-                    // bg-yellow-400
+                        rounded-full bg-white bg-opacity-80 cursor-pointer mb-0.2
+                        px-3 py-0.5 md:px-5 md:py-1
+                        text-sm sm:text-base md:text-lg lg:text-xl 
+                        "
                     initial={{ opacity: 0, y: -10 }}
                     //animate={{ opacity: 1, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -65,6 +64,7 @@ export default function Skills() {
                         width={25}
                         height={25}
                     />
+                    <span className="ml-2 text-indigo-900">{skill.name}</span>
                 </motion.span>
             ))}
         </div>
