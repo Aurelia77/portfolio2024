@@ -114,7 +114,7 @@ export default function About() {
       // whileInView={{ opacity: 1 }}
       // transition={{ duration: 2 }}
 
-      src="/images/cv.png"
+      src="/images/cv2.png"
       alt="CV Aurélia Heymann"
       // className="hidden rounded-lg shadow-lg w-full h-full md:block"
       className="rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full md:block "
