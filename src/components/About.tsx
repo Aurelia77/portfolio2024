@@ -85,7 +85,7 @@ export default function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.1, delay: 1 }}
-      href="/images/cv.pdf"
+      href="/images/CV Aurélia Heymann.pdf"
       download
       className="px-4 py-2 bg-cyan-500 text-white font-bold rounded hover:bg-cyan-600 transition-colors"
     >
@@ -114,7 +114,7 @@ export default function About() {
       // whileInView={{ opacity: 1 }}
       // transition={{ duration: 2 }}
 
-      src="/images/cv2.png"
+      src="/images/cv.png"
       alt="CV Aurélia Heymann"
       // className="hidden rounded-lg shadow-lg w-full h-full md:block"
       className="rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full md:block "
