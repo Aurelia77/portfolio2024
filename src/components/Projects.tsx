@@ -142,7 +142,11 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     // overflow-hidden 
                     // border-indigo-500 border-2                        
-                    <div key={index} className="rounded-lg bg-white p-5 mb-4 sm:mb-8 md:mb-12 ">
+                    <div key={index} className="rounded-lg bg-white p-5 
+                        mb-4 sm:mb-8 md:mb-12 
+                        xl:max-w-6xl xl:mx-auto
+                        "
+                    >
                         <div className='flex justify-between flex-wrap items-center gap-4 mt-3'>
                             <h3 className="font-bold text-3xl mr-5 text-indigo-900">{project.name}</h3>
                             <div className='flex gap-2 mr-5' >
@@ -189,7 +193,8 @@ export default function Projects() {
                             </div>
                             {/* BTNs Grand écran */}
                             <div className="hidden sm:block"> 
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Visit website</a>
+                                {/* On utilise notre classe CSS : animate-custom-pulse */}
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block font-bold py-2 px-8 rounded mr-2  animate-custom-pulse">Visit website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source code</a>
                                 {project.video &&
                                     <>
@@ -210,7 +215,7 @@ export default function Projects() {
                             </div>
                             {/* BTNs Petit écran */}
                             <div className="flex sm:hidden mt-1 flex-wrap gap-y-1">
-                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-4 rounded mr-2">Website</a>
+                                <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block bg-cyan-500 hover:bg-cyan-600  font-bold py-2 px-8 rounded mr-2  animate-custom-pulse">Website</a>
                                 <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className="inline-block bg-pink-500 hover:bg-pink-600  font-bold py-2 px-4 rounded mr-2">Source</a>
                                 {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Demo</a>}
                             </div>

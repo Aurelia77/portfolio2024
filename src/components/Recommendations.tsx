@@ -34,7 +34,7 @@ export default function Recommendations() {
       </div>
 
       <div className='
-        mt-10 sm:mt-14 lg:mt-20
+        my-10 sm:my-14 lg:my-20
       flex flex-wrap justify-around gap-1
       '>
         <div className='max-w-3xl mb-10'>
@@ -59,7 +59,7 @@ export default function Recommendations() {
             src="/images/recommandationJCS.png"
             alt="Aurélia Heymann recommendations"
             // className="hidden rounded-lg shadow-lg w-full h-full md:block"
-            className="rounded-lg shadow-xl border-4 border-white border-opacity-60 md:block "
+            className="rounded-lg shadow-xl bg-white border-4 border-indigo-500 border-opacity-50 md:bloc"
           />
         </div>
 
@@ -82,10 +82,10 @@ export default function Recommendations() {
             // whileInView={{ opacity: 1 }}
             // transition={{ duration: 2 }}
 
-            src="/images/recommandationLauriane.jpeg"
+            src="/images/recommandationLauriane.png"
             alt="Aurélia Heymann recommendations"
             // className="hidden rounded-lg shadow-lg w-full h-full md:block"
-            className="rounded-lg shadow-xl border-4 border-white border-opacity-60 md:block "
+            className="rounded-lg shadow-xl bg-white border-4 border-indigo-500 border-opacity-50 md:bloc"
           />
         </div>
       </div>

@@ -60,3 +60,20 @@ body {
 .cyanBtn {
   @apply font-bold rounded-full hover:shadow-lg bg-gradient-radial from-cyan-300 to-cyan-500 h-16 text-indigo-900
 }
+
+/* Pour les flash des boutons */
+@keyframes custom-pulse {
+  0% {
+    background-color: #26C6DA; /* Cyan-500 */
+  }
+  50% {
+    background-color: #00838F; /* Cyan-900 */
+  }
+  100% {
+    background-color: #26C6DA; /* Cyan-500 */
+  }
+}
+
+.animate-custom-pulse {
+  animation: custom-pulse 1s infinite;
+}

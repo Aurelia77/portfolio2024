@@ -103,6 +103,7 @@ export default function About() {
       plugins={[defaultLayoutPluginInstance]}
     />  */}  
    
+   
     <motion.img
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -113,7 +114,7 @@ export default function About() {
       // whileInView={{ opacity: 1 }}
       // transition={{ duration: 2 }}
 
-      src="/images/cv300.png"
+      src="/images/cv.png"
       alt="CV Aurélia Heymann"
       // className="hidden rounded-lg shadow-lg w-full h-full md:block"
       className="rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full md:block "

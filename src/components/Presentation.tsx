@@ -68,18 +68,22 @@ export default function Presentation() {
                 //animate={{ opacity: 1 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 2 }}
-                src="/images/portrait3.png"
+                src="/images/portrait2.png"
                 alt="Portrait Aurélia Heymann"
                 // className="hidden rounded-lg shadow-lg w-full h-full md:block"
-                className="hidden md:block rounded-lg shadow-xl border-4 border-white border-opacity-60 w-full h-full  "
+                className="hidden md:block rounded-lg shadow-xl 
+                w-full h-full  "
+                //border-4 border-white border-opacity-60 
             />
             <motion.img
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                src="/images/portrait2.png"
+                src="/images/portrait.png"
                 alt="Portrait Aurélia Heymann"
-                className="md:hidden rounded-lg shadow-lg border-4 border-white border-opacity-60 w-full h-full"
+                className="md:hidden rounded-lg shadow-xl 
+                w-full h-full  "
+                //border-4 border-white border-opacity-60 
             />
             {/* BOUTON dans une DIV pour avoir l'effet voulu (sinon il disparait quand on quitte le FOCUS) */}
             <motion.div
