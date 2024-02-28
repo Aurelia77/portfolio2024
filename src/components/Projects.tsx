@@ -38,7 +38,7 @@ export default function Projects() {
             ],
             link: "https://crm-public.vercel.app",
             sourceCode: "https://github.com/Aurelia77/crm-private.git",
-            video: "/videos/videoCRM2.mp4",
+            video: "/videos/videoCRM.mp4",
             images: [
                 {
                     url: "/images/projectCRM/home.png",
