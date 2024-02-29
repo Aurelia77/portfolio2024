@@ -33,7 +33,8 @@ export default function Projects() {
                 { name: "MUI", icon: "mui.png" },
                 { name: "Firebase", icon: "firebase.png" },
                 { name: "API", icon: "api.png" },
-                { name: "Framer Motion", icon: "framer-motion.png" },
+                { name: "Git", icon: "git.png" },
+                { name: "Github", icon: "github.png" },
             ],
             link: "https://crm-public.vercel.app",
             sourceCode: "https://github.com/Aurelia77/crm-private.git",
@@ -69,6 +70,8 @@ export default function Projects() {
                 { name: "React JS", icon: "react.png" },
                 { name: "Next JS", icon: "nextjs.png" },
                 { name: "TailwindCSS", icon: "tailwindcss.png" },
+                { name: "Git", icon: "git.png" },
+                { name: "Github", icon: "github.png" },
             ],
             link: "https://dessin-pink.vercel.app/autoDraw3",
             sourceCode: "https://github.com/Aurelia77/dessin.git",
@@ -91,6 +94,8 @@ export default function Projects() {
                 { name: "Next JS", icon: "nextjs.png" },
                 { name: "TailwindCSS", icon: "tailwindcss.png" },
                 { name: "API", icon: "api.png" },
+                { name: "Git", icon: "git.png" },
+                { name: "Github", icon: "github.png" },
             ],
             images: [
                 {
