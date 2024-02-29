@@ -33,7 +33,6 @@ export default function Projects() {
                 { name: "MUI", icon: "mui.png" },
                 { name: "Firebase", icon: "firebase.png" },
                 { name: "API", icon: "api.png" },
-                { name: "Responsive", icon: "responsive.png" },
                 { name: "Framer Motion", icon: "framer-motion.png" },
             ],
             link: "https://crm-public.vercel.app",
