@@ -85,7 +85,7 @@ export default function About() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.1, delay: 1 }}
-      href="/images/CV Aurélia Heymann Interactif.pdf"
+      href="/images/CV Aurélia Heymann DeveloppeurFRONT.pdf"
       download
       className="px-4 py-2 bg-cyan-500 text-white font-bold rounded hover:bg-cyan-600 transition-colors"
     >
