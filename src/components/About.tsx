@@ -69,7 +69,7 @@ export default function About() {
       transition={{ duration: 1, delay: 0.5 }}
       className="text-xl"
     >
-      Passionate web developer, I am driven by the desire to create websites that are efficient, aesthetic and user-friendly.
+      Passionate web developer, I am driven by the desire to create efficient, aesthetic and user-friendly websites.
     </motion.p>
 
     <motion.p
