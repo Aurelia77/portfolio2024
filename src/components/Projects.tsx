@@ -19,11 +19,11 @@ export default function Projects() {
             name: "CRM Project",
             description: 
                 <div>
-                    <h2>My last and more important project :</h2><br/>
-                    <p>I developed a tailored Customer Relationship Management (<span className={highlightedTextClasses}>CRM</span>) app for a self-employed person in the entertainment industry, meeting a <span className={highlightedTextClasses}>specific need</span> she had.</p><br/>
-                    <p>This tool simplifies contact management by enabling the addition of contacts through an <span className={highlightedTextClasses}>INSEE search</span> (thanks to an <span className={highlightedTextClasses}>API</span>), as well as a <span className={highlightedTextClasses}>quick search</span> functionality on the contact list, an <span className={highlightedTextClasses}>easy sorting</span>, and a <span className={highlightedTextClasses}>scheduling calendar</span> that includes follow-up dates.</p><br/>
-                    <p>On the <span className={highlightedTextClasses}>Admin</span> page we can manage contacts <span className={highlightedTextClasses}>categories and files.</span></p><br/>
-                    <p>Versatile enough for any solo entrepreneur, it efficiently improves contact management, providing a practical solution.
+                    <h2>My most recent and significant project:</h2><br/>
+                    <p>I developed a customized Customer Relationship Management (<span className={highlightedTextClasses}>CRM</span>) application for a self-employed person in the entertainment industry, meeting a <span className={highlightedTextClasses}>specific need</span> she had.</p><br/>
+                    <p>This tool simplifies contact management by enabling the addition of contacts through an <span className={highlightedTextClasses}>INSEE search</span> (utilizing an <span className={highlightedTextClasses}>API</span>), as well as providing <span className={highlightedTextClasses}>quick search functionality</span> on the contact list, <span className={highlightedTextClasses}>easy sorting options</span>, and a <span className={highlightedTextClasses}>scheduling calendar</span> with follow-up dates.</p><br/>
+                    <p>Additionally, the <span className={highlightedTextClasses}>Admin</span> page allows for <span className={highlightedTextClasses}>management of contacts categories and files.</span></p><br/>
+                    <p>Versatile enough for any solo entrepreneur, it significantly improves contact management, providing a practical solution.
                     </p>
                 </div>,
             techno: [
@@ -62,8 +62,8 @@ export default function Projects() {
             name: "Auto Drawing",
             description: 
                 <div>
-                    <h2>Have fun using this app</h2><br/>
-                    <p>This lets you create endless, flowing lines that bounce around the frame. With a simple click, you can launch a line that will continuously draw itself, changing direction whenever it hits the edge of the frame.
+                    <h2>Have fun using this app!</h2><br/>
+                    <p>It allows you to create endless, flowing lines that bounce around the frame. With a simple click, you can launch a line that will continuously draw itself, changing direction whenever it hits the edge of the frame.
                     </p>
                 </div>,
             techno: [

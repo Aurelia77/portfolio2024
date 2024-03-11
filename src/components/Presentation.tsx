@@ -9,9 +9,9 @@ export default function Presentation() {
         <div key={1}><span className='font-bold'>{"Front-end\u00A0developer"}</span></div>,
         // <div key={1}><span className='font-bold'>{"Front-end\u00A0developer"}</span> based in Grenoble (France)</div>,
         <div key={2}><span className='font-bold'>3 years IT experience</span></div>,
-        <div key={3}><span className='font-bold'>Last whole year : React and TS</span> formation and projects</div>,
+        <div key={3}>Recent <span className='font-bold'>1-year React and TypeScript</span> training with projects</div>,
         // <div key={3}><span className='font-bold'>Last whole year : React and TS</span> formation and projects ({"Mike\u00A0Codeur"})</div>,
-        <div key={4}><span className='font-bold'>5 years IT formation</span></div>,
+        <div key={4}><span className='font-bold'>5 years IT education</span></div>,
         <div key={5}><span className='font-bold'>Fluent in English</span></div>,
     ];
 
