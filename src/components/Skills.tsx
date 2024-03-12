@@ -25,7 +25,7 @@ export default function Skills() {
 
     return (
         <div className="flex flex-wrap justify-center max-w-[92%] m-auto
-                gap-[1%] sm:gap-2                 
+                gap-1 sm:gap-2                 
                 mt-6 sm:mt-10 md:mt-12 lg:mt-16
                 ">
             {skills.map((skill, index) => (
