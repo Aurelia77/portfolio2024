@@ -11,18 +11,26 @@ import 'react-slideshow-image/dist/styles.css'
 export default function Projects() {
 
     const [isModalVideoOpen, setIsModalVideoOpen] = React.useState(false);
+    const [showDescription, setShowDescription] = React.useState(false);
 
     const highlightedTextClasses = "font-bold text-indigo-200 text-shadow";
 
     const projects = [
         {
             name: "CRM Project",
-            description: 
+            quickDescr:
                 <div>
-                    <h2>My most recent and significant project:</h2><br/>
-                    <p>I developed a customized Customer Relationship Management (<span className={highlightedTextClasses}>CRM</span>) application for a self-employed person in the entertainment industry, meeting a <span className={highlightedTextClasses}>specific need</span> she had.</p><br/>
-                    <p>This tool simplifies contact management by enabling the addition of contacts through an <span className={highlightedTextClasses}>INSEE search</span> (utilizing an <span className={highlightedTextClasses}>API</span>), as well as providing <span className={highlightedTextClasses}>quick search functionality</span> on the contact list, <span className={highlightedTextClasses}>easy sorting options</span>, and a <span className={highlightedTextClasses}>scheduling calendar</span> with follow-up dates.</p><br/>
-                    <p>Additionally, the <span className={highlightedTextClasses}>Admin</span> page allows for <span className={highlightedTextClasses}>management of contacts categories and files.</span></p><br/>
+                    <h2>Most recent & important project</h2><br />
+                    <p>Customized <span className={highlightedTextClasses}>CRM</span> app developed for entertainment industry freelancer.</p>
+                    <p>Simplifies contact management with <span className={highlightedTextClasses}>INSEE company search, quick search, sorting, and scheduling</span>.</p>
+                    <p><span className={highlightedTextClasses}>Admin page</span> enables category and file management.</p>
+                </div>,
+            description:
+                <div>
+                    <h2>My most recent and significant project</h2><br />
+                    <p>I developed a customized Customer Relationship Management (<span className={highlightedTextClasses}>CRM</span>) application for a self-employed person in the entertainment industry, meeting a <span className={highlightedTextClasses}>specific need</span> she had.</p><br />
+                    <p>This tool simplifies contact management by enabling the addition of contacts through an <span className={highlightedTextClasses}>INSEE search</span> (utilizing an <span className={highlightedTextClasses}>API</span>), as well as providing <span className={highlightedTextClasses}>quick search functionality</span> on the contact list, <span className={highlightedTextClasses}>easy sorting options</span>, and a <span className={highlightedTextClasses}>scheduling calendar</span> with follow-up dates.</p><br />
+                    <p>Additionally, the <span className={highlightedTextClasses}>Admin</span> page allows for <span className={highlightedTextClasses}>management of contacts categories and files.</span></p><br />
                     <p>Versatile enough for any solo entrepreneur, it significantly improves contact management, providing a practical solution.
                     </p>
                 </div>,
@@ -60,10 +68,15 @@ export default function Projects() {
         },
         {
             name: "Auto Drawing",
+            quickDescr:
+            <div>
+                <h2>One click. An <span className={highlightedTextClasses}>endless line flows</span>, ever-changing within the frame.</h2>
+            </div>,
             description: 
                 <div>
                     <h2>Have fun using this app!</h2><br/>
-                    <p>It allows you to create endless, flowing lines that bounce around the frame. With a simple click, you can launch a line that will continuously draw itself, changing direction whenever it hits the edge of the frame.
+                    <p>It allows you to create an <span className={highlightedTextClasses}>endless, flowing line that bounce around the frame</span>.</p><br />
+                    <p>With a simple click, you can launch a line that will continuously draw itself, changing direction whenever it hits the edge of the frame.
                     </p>
                 </div>,
             techno: [
@@ -79,15 +92,22 @@ export default function Projects() {
         },
         {
             name: "Kitch : Twitch clone",
+            quickDescr:
+            <div>
+                <h2>Twitch website clone</h2><br />
+                <p>First time using <span className={highlightedTextClasses}>Twitch API, Next JS and Typescript</span>.</p>
+                <p><span className={highlightedTextClasses}>Collaboration</span> with other learners.</p>
+            </div>,
             description: 
                 <div>
                     <h2>Team project</h2><br/>
-                    <p>In mid-2023, after finishing my online React training with the formateur Mike Codeur, I collaborated with a team of other learners to build a Twitch website clone. This project marked my first experience with NextJS and TypeScript, and it proved to be a thrilling learning adventure. To this day, I find TypeScript indispensable and incorporate it into every project I work on.</p><br/>
-                    <p>We utilized the Twitch API to fetch and display data within our web app.</p><br/>
-                    <p>Collaborating with my teammates was an enriching experience. We honed our communication skills, efficiently divided tasks, and learned to work harmoniously towards a shared objective. However, it wasn&apos;t always easy. We faced challenges like time management, differing viewpoints, and technical difficulties.</p>
-                    <p>Unfortunately, the project was not completed due to the withdrawal of some team members.</p>
-                    <p>Despite these obstacles, the project was a valuable learning experience. I significantly improved my React skills, gained valuable experience with APIs, and strengthened my teamwork abilities.</p>
-                </div>,
+                    <p>In mid-2023, after completing my online React training with the instructor Mike Codeur, I <span className={highlightedTextClasses}>collaborated with a team of other learners to build a Twitch website clone</span>.</p> 
+                    <p>This project introduced me to <span className={highlightedTextClasses}>NextJS and TypeScript</span>, and it proved to be a thrilling learning adventure. To this day, I find TypeScript essential and incorporate it into every project I work on.</p><br/>
+                    <p>We utilized the Twitch <span className={highlightedTextClasses}>API</span> to fetch and display data within our web application.</p><br/>
+                    <p>Collaborating with my teammates was an enriching experience. We honed our communication skills, efficiently divided tasks, and <span className={highlightedTextClasses}>learned to work harmoniously towards a shared objective</span>. </p> 
+                    <p>However, the project encountered challenges like time management, differing viewpoints, and technical difficulties. Unfortunately, due to team members withdrawal, it was not fully realized.</p>
+                    <p>Despite these obstacles, this was a valuable learning experience. <span className={highlightedTextClasses}>I significantly improved my React skills, gained valuable experience with APIs, and strengthened my teamwork abilities</span>.</p>
+                </div>,           
             techno: [
                 { name: "React JS", icon: "react.png" },
                 { name: "TypeScript", icon: "ts.png" },
@@ -113,19 +133,6 @@ export default function Projects() {
         },    
     ]; 
 
-    // const [imageHeight, setImageHeight] = React.useState(0);
-
-    // console.log("imageHeight", imageHeight)
-    
-    // React.useEffect(() => {
-    //     const img = new window.Image();
-    //     img.onload = () => setImageHeight(img.height);
-
-    //     if (projects && projects[0] && projects[0].images && projects[0].images[0]) {       
-    //         img.src = projects[0].images[0].url;
-    //     }
-    //   }, []);
-
     return (
         <div
             id='projects'
@@ -146,7 +153,7 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     // overflow-hidden 
                     // border-indigo-500 border-2                        
-                    <div key={index} className="rounded-lg bg-white p-5 
+                    <div key={index} className="rounded-lg bg-white p-5 w-full
                         mb-4 sm:mb-8 md:mb-12 
                         xl:max-w-6xl xl:mx-auto
                         "
@@ -224,17 +231,10 @@ export default function Projects() {
                                 {project.video && <a href={project.video} target="_blank" rel="noopener noreferrer" className="inline-block bg-purple-500 hover:bg-purple-600  font-bold py-2 px-4 rounded">Demo</a>}
                             </div>
                         </div>
-                        <div
-                        // h-80
-                        // bg-orange-500 
-                            // p-[4%]
-                            className='
-                                '>
+                        <div>
                             <div className="mt-3 sm:mt-7">
                                 {project.images
-                                    ? <Slide
-                                        duration={3000}
-                                    >
+                                    ? <Slide duration={3000}>
                                         {project.images.map((image, index) => (
                                             <div
                                                 key={index}
@@ -270,20 +270,29 @@ export default function Projects() {
                                     : <AutoDrawing />
                                 }
                             </div>
-                            <div className="mt-3">
+                            <div className="mt-3 w-full">
                                 <motion.div
-                                    className="p-3 w-full h-full bg-gradient-to-r from-indigo-500 to-indigo-800 flex items-center justify-center  text-lg"
+                                    className="p-3 w-full h-full bg-gradient-to-r from-indigo-500 to-indigo-800 flex items-center justify-center"
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                 // whileHover={{
-                                //     opacity: 1,
-                                //     transition: { duration: 0.5 }
-                                // }}
+                                    //     opacity: 1,
+                                    //     transition: { duration: 0.5 }
+                                    // }}
+                                    onMouseEnter={() => setShowDescription(true)}
+                                    onMouseLeave={() => setShowDescription(false)}
                                 >
-                                    <div className="flex items-center justify-center bg-gradient-to-r from-red-600 via-pink-600 to-purple-700">
-                                        <div className="p-4 bg-white bg-opacity-25 rounded shadow-lg m-2 ">
-                                            {project.description}
-                                        </div>
+                                    <div className="w-full flex items-center justify-start bg-gradient-to-r from-red-600 via-pink-600 to-purple-700 rounded p-4">
+                                        {/* {project.description} */}
+                                        {/* {project.quickDescr} */}
+                                        {showDescription 
+                                            ? <div className='text-lg'>
+                                                {project.description}
+                                            </div> 
+                                            : <div className='text-lg sm:text-xl font-bold'>
+                                                {project.quickDescr}
+                                            </div>
+                                        }
                                     </div>
                                 </motion.div>
                             </div>
