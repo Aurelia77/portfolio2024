@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </PortfolioContextProvider>
+        <Analytics />
       </body>
     </html>
   );
